@@ -214,31 +214,31 @@
       <properties>
         <property name="requirement" value="REQ-13" />
         <property name="level" value="simulation" />
-        <property name="artifact.spec_sha256" value="27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df" />
+        <property name="artifact.spec_sha256" value="275e8cc84dd75ec3e1b82bc7389193d8ee3c4520dcda6ef860ff28065003d142" />
         <property name="artifact.board_sha256" value="81d80c9a6969556d9a3a463f8a0e7456023fb9c7c986808347c8bb7bd653c6e8" />
       </properties>
-      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry" />
-      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry</system-out>
+      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97" />
+      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97</system-out>
     </testcase>
     <testcase name="assembly_model_scope" classname="assembly_validation">
       <properties>
         <property name="requirement" value="REQ-14" />
         <property name="level" value="inspection" />
-        <property name="artifact.spec_sha256" value="27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df" />
+        <property name="artifact.spec_sha256" value="275e8cc84dd75ec3e1b82bc7389193d8ee3c4520dcda6ef860ff28065003d142" />
         <property name="artifact.board_sha256" value="81d80c9a6969556d9a3a463f8a0e7456023fb9c7c986808347c8bb7bd653c6e8" />
       </properties>
-      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry" />
-      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry</system-out>
+      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97" />
+      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97</system-out>
     </testcase>
     <testcase name="mesh_and_tolerance_convergence" classname="assembly_validation">
       <properties>
         <property name="requirement" value="REQ-15" />
         <property name="level" value="simulation" />
-        <property name="artifact.spec_sha256" value="27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df" />
+        <property name="artifact.spec_sha256" value="275e8cc84dd75ec3e1b82bc7389193d8ee3c4520dcda6ef860ff28065003d142" />
         <property name="artifact.board_sha256" value="81d80c9a6969556d9a3a463f8a0e7456023fb9c7c986808347c8bb7bd653c6e8" />
       </properties>
-      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry" />
-      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry</system-out>
+      <skipped message="Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97" />
+      <system-out>reports/assembly-validation.json; spec.json#/assembly_validation; Whole-assembly simulation not run: No qualified 1092-03A-6 internal RF geometry/model; Resistor S-parameter reference planes, mounting and normalization not qualified; Full assembly loss/material properties and fabrication tolerances not qualified; No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97</system-out>
     </testcase>
   </testsuite>
 </testsuites>

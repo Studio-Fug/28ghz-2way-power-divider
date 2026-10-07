@@ -24,6 +24,10 @@ The optimizer used more demanding targets (20 dB return loss, 17 dB isolation, 0
 
 YAPNR is fetched as a pinned external dependency ([declaration](../dependencies/yapnr.json), [Dockerfile](../Dockerfile)). The original image omits RF export modules; [upstream issue #96](https://github.com/Studio-Fug/yapnr/issues/96) tracks the packaging fix. [Dependency smoke check](dependency-smoke.json) re-runs the coarse sweep outside the source checkout and compares its complex S matrix with the original committed simulation. The simulation artifacts and RF acceptance failures are unchanged.
 
+## Assembly solver integration
+
+YAPNR provides suitable openEMS and PALACE engines and partial integration, including a planar KiCad importer and the PALACE mesh/config/sign-off pipeline. The [backend audit](backend-capability-audit.json) found that this importer omits both floating copper islands (0.945 mm² total) and represents the NPTH pads as copper. No whole-assembly solve was performed. [Upstream issue #97](https://github.com/Studio-Fug/yapnr/issues/97) requests a unified assembly SSoT, YAPNR-owned component-model resolution and adapters, import coverage checks, and a minimal-code external validation workflow. The project [spec](../spec.json) explicitly requires this architecture; the client must not compensate with custom solver geometry or mesh scripts.
+
 ## Board verification
 
 [Native KiCad 10.0.6 DRC](../output/test-board/drc.json): zero violations and zero unconnected items. This verifies layout rules and DC connectivity, not microwave performance. The main footprint polygon is represented as a custom-pad primitive in the board so it participates in KiCad connectivity; its polygon coordinates are preserved (verified by [exact coordinate comparison](board-geometry.json), including floating islands). [Board builder](../build_board.py) records this conversion. The optimized footprint's own minimum-width/space check is in result.json under drc.

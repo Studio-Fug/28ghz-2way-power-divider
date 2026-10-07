@@ -1305,7 +1305,7 @@
       "id": "REQ-14",
       "title": "Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance",
       "status": "INCOMPLETE",
-      "description": "Include every required_model_scope item in spec.json; missing or idealized launch/package models block assembly validation.",
+      "description": "Include every required_model_scope item in spec.json using the unified_model_contract: YAPNR-owned SSoT, part resolution and solver adapters; no bespoke client geometry/mesh/model-generation code. Missing or idealized models block assembly validation.",
       "basis": "own",
       "set": {
         "complete": false,

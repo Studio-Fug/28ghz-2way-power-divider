@@ -1,7 +1,8 @@
 {
-  "spec.json": "27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df",
+  "spec.json": "275e8cc84dd75ec3e1b82bc7389193d8ee3c4520dcda6ef860ff28065003d142",
   "specs/dut-optimization.json": "94037f0affd8bd34b17abea5c24a038f150f82a45867557a7a3d01347c7a2c75",
-  "reports/assembly-validation.json": "1f2e4bf2cc52384c3128e8cbbcfa4f77dcb24cb2c73e0755e54a9bb23c3b726e",
+  "reports/assembly-validation.json": "c57661fdfcf1441c002a82c9da000d2255e932ce669378b780868f9695ed97d5",
+  "reports/backend-capability-audit.json": "442a625a6e85a59dd36a0c7bb739e5f0a53d11ed6e33e2f6012a3b7495f290c9",
   "models/resistor/CH02016F_P_100R.s2p": "04365104109f382cf6ac035bef9b9808464a01361509d73b67b0dd7b89ce4cca",
   "runs/jlc20mil/footprint.kicad_mod": "9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c",
   "runs/jlc20mil/result.json": "979e1859f72996854fb9688dca2d7cd7ff7937d5bcff9123ba1477bdfcfdb9bc",

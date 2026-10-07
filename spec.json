@@ -99,10 +99,21 @@
         "Packaged resistor or verified EM/circuit co-simulation",
         "Conductor and dielectric losses"
       ],
-      "backend": null,
+      "backend": "openEMS",
       "adapter": null,
       "pinned_yapnr_native_sufficient": false,
-      "capability_note": "Pinned planar YAPNR BoardSpec has a finite rectangular substrate, planar copper/ground and lumped board ports; it cannot directly represent this full assembly."
+      "capability_note": "Native YAPNR BoardSpec is insufficient for the full assembly. YAPNR has broader openEMS/PALACE integrations, but the audited interface still requires manual stack/port and assembly model construction; no supported minimal-code full-assembly adapter was identified.",
+      "comparison_backend": "PALACE",
+      "engine_capability": "Both are suitable 3D EM engines; no claim that either engine is incapable",
+      "backend_selection_basis": "openEMS as the existing sweep workhorse; PALACE as independent FEM comparison",
+      "available_yapnr_integrations": [
+        "yapnr.rf.planar.adapters.from_kicad",
+        "yapnr.rf.palace mesh/config/signoff/results pipeline",
+        "openEMS/PALACE task images and cloud campaign planners",
+        "Project-specific openEMS connector examples"
+      ],
+      "workflow_issue": "https://github.com/Studio-Fug/yapnr/issues/97",
+      "audit": "reports/backend-capability-audit.json"
     },
     "acceptance": {
       "return_loss_min_db_all_ports": 15,
@@ -151,6 +162,35 @@
       "bench_measurement_requirement": "REQ-11",
       "power_qualification_is_separate": true
     },
-    "report": "reports/assembly-validation.json"
+    "report": "reports/assembly-validation.json",
+    "unified_model_contract": {
+      "owner": "YAPNR",
+      "schema_requirement": "One versioned, solver-neutral assembly SSoT; extend or reuse the existing planar model as appropriate",
+      "source_inputs": [
+        "Completed zone-filled KiCad board",
+        "BOM and assembly/terminal mapping",
+        "Component part identifiers or qualified model registry references",
+        "Declarative port and reference-plane intent",
+        "RF acceptance requirements"
+      ],
+      "yapnr_responsibilities": [
+        "Read board/assembly and resolve part models",
+        "Normalize complete geometry, materials, contacts and circuit models into the SSoT",
+        "Generate openEMS and PALACE inputs through supported adapters",
+        "Define meshes, ports, loss representations and EM/circuit coupling from the common model",
+        "Validate model coverage and solver capabilities before execution",
+        "Run excitation/convergence campaigns and publish results and requirements evidence"
+      ],
+      "client_custom_solver_model_generation_required": false,
+      "client_custom_geometry_or_mesh_code_allowed_for_release": false,
+      "shared_definitions": [
+        "Geometry and coordinate frames",
+        "Material properties and losses",
+        "Component models and terminal mappings",
+        "Ports, calibration planes and impedance normalization"
+      ],
+      "traceability": "Every solver input and result must reference the same canonical assembly geometry/material/model hash, its adapter/version, declared numerical approximations and settings",
+      "upstream_issue": "https://github.com/Studio-Fug/yapnr/issues/97"
+    }
   }
 }

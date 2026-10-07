@@ -59,7 +59,7 @@ model['requirements'] += [
  {'id':'REQ-12','title':'Qualify 5 W coherent combining under specified thermal conditions','satisfies':['UN-1'],'method':'TM-4','description':'No power or thermal qualification. Present resistor is intended for small-signal VNA tests only.'}]
 model['requirements'] += [
  {'id':'REQ-13','title':'Whole populated assembly meets every RF acceptance limit at the three coaxial connector planes','satisfies':['UN-1','UN-2'],'method':'TM-5','description':'Mandatory release gate in spec.json assembly_validation. Include fixture losses and actual feeds/bends, launches, finite board, ground/vias and packaged resistor. DUT-only results do not satisfy this requirement.'},
- {'id':'REQ-14','title':'Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance','satisfies':['UN-2'],'method':'TM-6','description':'Include every required_model_scope item in spec.json; missing or idealized launch/package models block assembly validation.'},
+ {'id':'REQ-14','title':'Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance','satisfies':['UN-2'],'method':'TM-6','description':'Include every required_model_scope item in spec.json using the unified_model_contract: YAPNR-owned SSoT, part resolution and solver adapters; no bespoke client geometry/mesh/model-generation code. Missing or idealized models block assembly validation.'},
  {'id':'REQ-15','title':'Whole-assembly RF results have mesh, time-domain and tolerance convergence evidence','satisfies':['UN-3'],'method':'TM-5','description':'Three meshes, configured finest-pair error bounds, converged excitations, numerical checks and vendor-supported tolerance cases required by spec.json.'}]
 assembly=json.loads((out/'assembly-validation.json').read_text())
 assembly_suite=ET.SubElement(suites,'testsuite',name='assembly')
@@ -120,6 +120,10 @@ The optimizer used more demanding targets (20 dB return loss, 17 dB isolation, 0
 
 YAPNR is fetched as a pinned external dependency ([declaration](../dependencies/yapnr.json), [Dockerfile](../Dockerfile)). The original image omits RF export modules; [upstream issue #96](https://github.com/Studio-Fug/yapnr/issues/96) tracks the packaging fix. [Dependency smoke check](dependency-smoke.json) re-runs the coarse sweep outside the source checkout and compares its complex S matrix with the original committed simulation. The simulation artifacts and RF acceptance failures are unchanged.
 
+## Assembly solver integration
+
+YAPNR provides suitable openEMS and PALACE engines and partial integration, including a planar KiCad importer and the PALACE mesh/config/sign-off pipeline. The [backend audit](backend-capability-audit.json) found that this importer omits both floating copper islands (0.945 mm² total) and represents the NPTH pads as copper. No whole-assembly solve was performed. [Upstream issue #97](https://github.com/Studio-Fug/yapnr/issues/97) requests a unified assembly SSoT, YAPNR-owned component-model resolution and adapters, import coverage checks, and a minimal-code external validation workflow. The project [spec](../spec.json) explicitly requires this architecture; the client must not compensate with custom solver geometry or mesh scripts.
+
 ## Board verification
 
 [Native KiCad 10.0.6 DRC](../output/test-board/drc.json): zero violations and zero unconnected items. This verifies layout rules and DC connectivity, not microwave performance. The main footprint polygon is represented as a custom-pad primitive in the board so it participates in KiCad connectivity; its polygon coordinates are preserved (verified by [exact coordinate comparison](board-geometry.json), including floating islands). [Board builder](../build_board.py) records this conversion. The optimized footprint's own minimum-width/space check is in result.json under drc.
@@ -136,6 +140,6 @@ The rules_requirements [traceability report](traceability.md), [machine report](
 '''
 (out/'validation.md').write_text(text)
 # Hashes bind every report to the exact committed design/simulation artifacts.
-paths=[ROOT/'spec.json',ROOT/'specs/dut-optimization.json',out/'assembly-validation.json',ROOT/'models/resistor/CH02016F_P_100R.s2p',run/'footprint.kicad_mod',run/'result.json',run/'comparison.json',ROOT/'output/test-board/rf-combiner-test.kicad_pcb',ROOT/'output/test-board/drc.json']+list(run.glob('*-validated.s3p'))+list(run.glob('*-validated.npz'))
+paths=[ROOT/'spec.json',ROOT/'specs/dut-optimization.json',out/'assembly-validation.json',out/'backend-capability-audit.json',ROOT/'models/resistor/CH02016F_P_100R.s2p',run/'footprint.kicad_mod',run/'result.json',run/'comparison.json',ROOT/'output/test-board/rf-combiner-test.kicad_pcb',ROOT/'output/test-board/drc.json']+list(run.glob('*-validated.s3p'))+list(run.glob('*-validated.npz'))
 (out/'artifact-manifest.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},indent=2)+'\n')
 print('Wrote model, evidence, report and artifact manifest.')

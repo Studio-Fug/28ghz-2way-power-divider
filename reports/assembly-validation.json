@@ -4,7 +4,7 @@
   "simulation_run": false,
   "validated": false,
   "spec": "spec.json",
-  "spec_sha256": "27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df",
+  "spec_sha256": "275e8cc84dd75ec3e1b82bc7389193d8ee3c4520dcda6ef860ff28065003d142",
   "reference_planes": {
     "definition": "Coaxial mating/calibration planes of the three installed 2.92 mm connectors",
     "ports": [
@@ -32,7 +32,7 @@
     "No qualified 1092-03A-6 internal RF geometry/model",
     "Resistor S-parameter reference planes, mounting and normalization not qualified",
     "Full assembly loss/material properties and fabrication tolerances not qualified",
-    "No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry"
+    "No supported minimal-code YAPNR assembly SSoT/adapter configured; openEMS and PALACE engines are suitable, but integration and import fidelity gaps are tracked in issue #97"
   ],
   "required_evidence": [
     "Full complex 3-port Touchstone at connector planes",
