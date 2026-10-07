@@ -1,6 +1,15 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")/.."
+if python3 scripts/check_assembly_readiness.py; then
+  :
+else
+  readiness_status=$?
+  case "$readiness_status" in
+    2|3) ;; # BLOCKED / NOT_RUN: still render the incomplete evidence report.
+    *) exit "$readiness_status" ;;
+  esac
+fi
 python3 scripts/make_validation_report.py
 rr validate requirements/
 rr report --model requirements/ --evidence reports/testlogs/validation/test.xml \

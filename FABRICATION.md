@@ -1,6 +1,6 @@
 # Fabrication and assembly — experimental revision A
 
-The Gerber/drill ZIP represents the committed 40 × 36 mm board. It has native KiCad DRC approval but **fails RF requirements**. Use it as a small-signal experimental coupon, not a production-equivalent combiner.
+The Gerber/drill ZIP represents the committed 40 × 36 mm board. It has native KiCad DRC approval but **fails RF requirements**. Use it as a small-signal experimental coupon, not a production-equivalent combiner. Complete populated-assembly simulation at connector reference planes is mandatory under [spec.json](spec.json), and currently blocked; see [assembly status](reports/assembly-validation.json).
 
 ## JLC quote selections
 

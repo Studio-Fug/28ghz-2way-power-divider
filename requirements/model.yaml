@@ -16,7 +16,7 @@
   "requirements": [
     {
       "id": "REQ-1",
-      "title": "Return loss >=15 dB at each port over 24-32 GHz",
+      "title": "DUT-plane: Return loss >=15 dB at each port over 24-32 GHz",
       "satisfies": [
         "UN-1"
       ],
@@ -35,7 +35,7 @@
     },
     {
       "id": "REQ-2",
-      "title": "Isolation >=14 dB over 24-32 GHz",
+      "title": "DUT-plane: Isolation >=14 dB over 24-32 GHz",
       "satisfies": [
         "UN-1"
       ],
@@ -54,7 +54,7 @@
     },
     {
       "id": "REQ-3",
-      "title": "Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
+      "title": "DUT-plane: Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
       "satisfies": [
         "UN-1"
       ],
@@ -73,7 +73,7 @@
     },
     {
       "id": "REQ-4",
-      "title": "Amplitude imbalance <=0.5 dB over 24-32 GHz",
+      "title": "DUT-plane: Amplitude imbalance <=0.5 dB over 24-32 GHz",
       "satisfies": [
         "UN-1"
       ],
@@ -92,7 +92,7 @@
     },
     {
       "id": "REQ-5",
-      "title": "Phase imbalance <=5 degrees over 24-32 GHz",
+      "title": "DUT-plane: Phase imbalance <=5 degrees over 24-32 GHz",
       "satisfies": [
         "UN-1"
       ],
@@ -111,7 +111,7 @@
     },
     {
       "id": "REQ-6",
-      "title": "Equal-phase coherent combining loss <=0.7 dB",
+      "title": "DUT-plane: Equal-phase coherent combining loss <=0.7 dB",
       "satisfies": [
         "UN-1"
       ],
@@ -130,7 +130,7 @@
     },
     {
       "id": "REQ-7",
-      "title": "Scattering matrix is passive within 0.001 numerical tolerance",
+      "title": "DUT-plane: Scattering matrix is passive within 0.001 numerical tolerance",
       "satisfies": [
         "UN-3"
       ],
@@ -213,6 +213,58 @@
       ],
       "method": "TM-4",
       "description": "No power or thermal qualification. Present resistor is intended for small-signal VNA tests only."
+    },
+    {
+      "id": "REQ-13",
+      "title": "Whole populated assembly meets every RF acceptance limit at the three coaxial connector planes",
+      "satisfies": [
+        "UN-1",
+        "UN-2"
+      ],
+      "method": "TM-5",
+      "description": "Mandatory release gate in spec.json assembly_validation. Include fixture losses and actual feeds/bends, launches, finite board, ground/vias and packaged resistor. DUT-only results do not satisfy this requirement.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "assembly_validation::full_assembly_rf_acceptance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "title": "Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance",
+      "satisfies": [
+        "UN-2"
+      ],
+      "method": "TM-6",
+      "description": "Include every required_model_scope item in spec.json; missing or idealized launch/package models block assembly validation.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "assembly_validation::assembly_model_scope"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "title": "Whole-assembly RF results have mesh, time-domain and tolerance convergence evidence",
+      "satisfies": [
+        "UN-3"
+      ],
+      "method": "TM-5",
+      "description": "Three meshes, configured finest-pair error bounds, converged excitations, numerical checks and vendor-supported tolerance cases required by spec.json.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "assembly_validation::mesh_and_tolerance_convergence"
+          ]
+        }
+      ]
     }
   ],
   "test_methods": [
@@ -236,6 +288,16 @@
       "id": "TM-4",
       "title": "Controlled-power thermal qualification",
       "level": "hil"
+    },
+    {
+      "id": "TM-5",
+      "title": "Complete assembly EM/co-simulation at coaxial connector planes",
+      "level": "simulation"
+    },
+    {
+      "id": "TM-6",
+      "title": "Assembly model coverage and provenance inspection",
+      "level": "inspection"
     }
   ]
 }

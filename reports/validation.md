@@ -2,7 +2,9 @@
 
 **Overall disposition: FAIL — experimental small-signal coupon; PDW07630 equivalence is not established.**
 
-This report verifies the exported copper, not only the optimizer's density model. Its results supersede the earlier optimizer summary. The reference planes are the three design-window boundaries, with 50 ohm renormalization, not the fixture connectors. Each sweep has 81 points over 24–32 GHz.
+**Whole-assembly validation is BLOCKED and has not run.** See [assembly status](assembly-validation.json) and the mandatory [project spec](../spec.json). DUT-only results cannot release the populated board.
+
+The numerical results below assess only the exported DUT copper, not the populated assembly or only the optimizer's density model. Its results supersede the earlier optimizer summary. The reference planes are the three design-window boundaries, with 50 ohm renormalization, not the fixture connectors. Each sweep has 81 points over 24–32 GHz.
 
 | Grid | Pitch mm | Worst return loss dB (>=15) | Isolation dB (>=14) | Excess loss dB (<=0.7) | Coherent combining loss dB (<=0.7) | Result |
 |---|---:|---:|---:|---:|---:|---|

@@ -25,7 +25,9 @@ model={'user_needs':[
  {'id':'TM-1','title':'Exported-footprint native FDTD on three grids','level':'simulation','description':'81 frequencies from 24 to 32 GHz; 50 ohm renormalization; inspect reports/validation.md for limitations.'},
  {'id':'TM-2','title':'KiCad native DRC and geometry inspection','level':'inspection'},
  {'id':'TM-3','title':'Calibrated three-port VNA measurement','level':'hil'},
- {'id':'TM-4','title':'Controlled-power thermal qualification','level':'hil'}]}
+ {'id':'TM-4','title':'Controlled-power thermal qualification','level':'hil'},
+ {'id':'TM-5','title':'Complete assembly EM/co-simulation at coaxial connector planes','level':'simulation'},
+ {'id':'TM-6','title':'Assembly model coverage and provenance inspection','level':'inspection'}]}
 suites=ET.Element('testsuites')
 def case(suite,name,req,level,passed,detail):
  c=ET.SubElement(suite,'testcase',name=name,classname='rf_validation')
@@ -35,7 +37,7 @@ def case(suite,name,req,level,passed,detail):
  if not passed: ET.SubElement(c,'failure',message=detail).text=detail
  ET.SubElement(c,'system-out').text=detail
 for req,title,key,predicate,label in checks:
- model['requirements'].append({'id':req,'title':title,'satisfies':['UN-1' if req in ['REQ-1','REQ-2','REQ-3','REQ-4','REQ-5','REQ-6'] else 'UN-3'],'method':'TM-1','description':'Simulation-only acceptance. Physical equivalence requires REQ-11.'})
+ model['requirements'].append({'id':req,'title':'DUT-plane: '+title,'satisfies':['UN-1' if req in ['REQ-1','REQ-2','REQ-3','REQ-4','REQ-5','REQ-6'] else 'UN-3'],'method':'TM-1','description':'Simulation-only acceptance. Physical equivalence requires REQ-11.'})
 for grid in ['coarse','fine','finer']:
  s=ET.SubElement(suites,'testsuite',name=grid)
  if grid not in comparison['grids']:
@@ -55,6 +57,21 @@ model['requirements'] += [
  {'id':'REQ-10','title':'Zero native KiCad DRC violations and unconnected items','satisfies':['UN-2'],'method':'TM-2'},
  {'id':'REQ-11','title':'Complete fixture meets RF limits at calibrated connector reference planes','satisfies':['UN-1','UN-2'],'method':'TM-3','description':'Not simulated or measured: launches, feeds, packaged resistor, finish and tolerances require bench verification.'},
  {'id':'REQ-12','title':'Qualify 5 W coherent combining under specified thermal conditions','satisfies':['UN-1'],'method':'TM-4','description':'No power or thermal qualification. Present resistor is intended for small-signal VNA tests only.'}]
+model['requirements'] += [
+ {'id':'REQ-13','title':'Whole populated assembly meets every RF acceptance limit at the three coaxial connector planes','satisfies':['UN-1','UN-2'],'method':'TM-5','description':'Mandatory release gate in spec.json assembly_validation. Include fixture losses and actual feeds/bends, launches, finite board, ground/vias and packaged resistor. DUT-only results do not satisfy this requirement.'},
+ {'id':'REQ-14','title':'Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance','satisfies':['UN-2'],'method':'TM-6','description':'Include every required_model_scope item in spec.json; missing or idealized launch/package models block assembly validation.'},
+ {'id':'REQ-15','title':'Whole-assembly RF results have mesh, time-domain and tolerance convergence evidence','satisfies':['UN-3'],'method':'TM-5','description':'Three meshes, configured finest-pair error bounds, converged excitations, numerical checks and vendor-supported tolerance cases required by spec.json.'}]
+assembly=json.loads((out/'assembly-validation.json').read_text())
+assembly_suite=ET.SubElement(suites,'testsuite',name='assembly')
+assembly_cases={13:'full_assembly_rf_acceptance',14:'assembly_model_scope',15:'mesh_and_tolerance_convergence'}
+for n,name in assembly_cases.items():
+ c=ET.SubElement(assembly_suite,'testcase',name=name,classname='assembly_validation')
+ props=ET.SubElement(c,'properties')
+ for key,value in [('requirement','REQ-'+str(n)),('level','inspection' if n==14 else 'simulation'),('artifact.spec_sha256',assembly['spec_sha256']),('artifact.board_sha256',assembly['board_sha256'])]:
+  ET.SubElement(props,'property',name=key,value=value)
+ reason='Whole-assembly simulation not run: '+'; '.join(assembly['blockers'])
+ ET.SubElement(c,'skipped',message=reason)
+ ET.SubElement(c,'system-out').text='reports/assembly-validation.json; spec.json#/assembly_validation; '+reason
 board=(ROOT/'output/test-board/rf-combiner-test.kicad_pcb').read_text()
 case(s,'core_and_outline','REQ-8','inspection','(thickness 0.51)' in board and '(material "RO4350B")' in board,'output/test-board/rf-combiner-test.kicad_pcb; outline dimensions: output/test-board/geometry.json. Core .51 mm, nominal finished thickness .65 mm; stackup requires fab confirmation.')
 geom=json.loads((ROOT/'output/test-board/geometry.json').read_text())
@@ -64,6 +81,8 @@ for req in model['requirements']:
  n=int(req['id'].split('-')[1])
  if n<=7:
   names=['rf_validation::'+g+'_'+req['id'] for g in ['coarse','fine','finer']]
+ elif n>=13:
+  names=['assembly_validation::'+assembly_cases[n]]
  elif n<=10:
   names=['rf_validation::'+{8:'core_and_outline',9:'launch_footprints',10:'native_drc'}[n]]
  else:
@@ -81,7 +100,9 @@ text='''# Validation of revision A
 
 **Overall disposition: FAIL — experimental small-signal coupon; PDW07630 equivalence is not established.**
 
-This report verifies the exported copper, not only the optimizer's density model. Its results supersede the earlier optimizer summary. The reference planes are the three design-window boundaries, with 50 ohm renormalization, not the fixture connectors. Each sweep has 81 points over 24–32 GHz.
+**Whole-assembly validation is BLOCKED and has not run.** See [assembly status](assembly-validation.json) and the mandatory [project spec](../spec.json). DUT-only results cannot release the populated board.
+
+The numerical results below assess only the exported DUT copper, not the populated assembly or only the optimizer's density model. Its results supersede the earlier optimizer summary. The reference planes are the three design-window boundaries, with 50 ohm renormalization, not the fixture connectors. Each sweep has 81 points over 24–32 GHz.
 
 | Grid | Pitch mm | Worst return loss dB (>=15) | Isolation dB (>=14) | Excess loss dB (<=0.7) | Coherent combining loss dB (<=0.7) | Result |
 |---|---:|---:|---:|---:|---:|---|
@@ -115,6 +136,6 @@ The rules_requirements [traceability report](traceability.md), [machine report](
 '''
 (out/'validation.md').write_text(text)
 # Hashes bind every report to the exact committed design/simulation artifacts.
-paths=[ROOT/'spec.json',run/'footprint.kicad_mod',run/'result.json',run/'comparison.json',ROOT/'output/test-board/rf-combiner-test.kicad_pcb',ROOT/'output/test-board/drc.json']+list(run.glob('*-validated.s3p'))+list(run.glob('*-validated.npz'))
+paths=[ROOT/'spec.json',ROOT/'specs/dut-optimization.json',out/'assembly-validation.json',ROOT/'models/resistor/CH02016F_P_100R.s2p',run/'footprint.kicad_mod',run/'result.json',run/'comparison.json',ROOT/'output/test-board/rf-combiner-test.kicad_pcb',ROOT/'output/test-board/drc.json']+list(run.glob('*-validated.s3p'))+list(run.glob('*-validated.npz'))
 (out/'artifact-manifest.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},indent=2)+'\n')
 print('Wrote model, evidence, report and artifact manifest.')

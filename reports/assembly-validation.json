@@ -1,0 +1,47 @@
+{
+  "schema": "rf-combiner-assembly-validation/1",
+  "status": "BLOCKED",
+  "simulation_run": false,
+  "validated": false,
+  "spec": "spec.json",
+  "spec_sha256": "27aaa18623cb6361eba629f7b59b359229ece34eff07e4365c8b6dc888baa7df",
+  "reference_planes": {
+    "definition": "Coaxial mating/calibration planes of the three installed 2.92 mm connectors",
+    "ports": [
+      {
+        "n": 1,
+        "reference": "J1",
+        "function": "SUM"
+      },
+      {
+        "n": 2,
+        "reference": "J2",
+        "function": "IN A"
+      },
+      {
+        "n": 3,
+        "reference": "J3",
+        "function": "IN B"
+      }
+    ],
+    "excitation": "All three calibrated coaxial fundamental modes; all unexcited ports terminated in 50 ohm"
+  },
+  "board": "output/test-board/rf-combiner-test.kicad_pcb",
+  "board_sha256": "81d80c9a6969556d9a3a463f8a0e7456023fb9c7c986808347c8bb7bd653c6e8",
+  "blockers": [
+    "No qualified 1092-03A-6 internal RF geometry/model",
+    "Resistor S-parameter reference planes, mounting and normalization not qualified",
+    "Full assembly loss/material properties and fabrication tolerances not qualified",
+    "No configured full-assembly solver/adapter; pinned planar YAPNR cannot represent the required geometry"
+  ],
+  "required_evidence": [
+    "Full complex 3-port Touchstone at connector planes",
+    "Geometry and material model files with provenance and hashes",
+    "Mesh and time-domain convergence logs",
+    "All RF metrics compared with connector-plane limits",
+    "Tolerance-corner results",
+    "Solver version, settings and reproducible invocation"
+  ],
+  "dut_results": "runs/jlc20mil/comparison.json",
+  "dut_results_satisfy_assembly_gate": false
+}

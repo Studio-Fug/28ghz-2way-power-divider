@@ -2,6 +2,9 @@
 schema: rules_requirements/verification-lock/v1
 cases:
   //:validation:
+    "assembly_validation::assembly_model_scope": REQ-14
+    "assembly_validation::full_assembly_rf_acceptance": REQ-13
+    "assembly_validation::mesh_and_tolerance_convergence": REQ-15
     "rf_validation::coarse_REQ-1": REQ-1
     "rf_validation::coarse_REQ-2": REQ-2
     "rf_validation::coarse_REQ-3": REQ-3

@@ -4,24 +4,24 @@
   "project": {},
   "summary": {
     "user_needs": 3,
-    "user_needs_validated": 1,
-    "requirements": 12,
+    "user_needs_validated": 0,
+    "requirements": 15,
     "requirements_verified": 7,
     "requirements_under_verified": 0,
     "requirements_partial": 0,
     "requirements_failed": 3,
     "requirements_unverified": 2,
-    "requirements_incomplete": 0,
+    "requirements_incomplete": 3,
     "requirements_invalid": 0,
     "risks": 0,
     "risks_mitigated": 0,
     "mitigations": 0,
     "mitigations_verified": 0,
-    "test_cases": 24,
-    "test_cases_owned": 24,
+    "test_cases": 27,
+    "test_cases_owned": 27,
     "test_cases_unowned": 0,
     "test_cases_quarantined": 0,
-    "gaps": 5
+    "gaps": 8
   },
   "attribution": {
     "mode": "hybrid",
@@ -31,8 +31,8 @@
     "lane": null,
     "targets": {
       "//:validation": {
-        "cases": 24,
-        "owned": 24,
+        "cases": 27,
+        "owned": 27,
         "quarantined": 0,
         "owners": [
           "REQ-1",
@@ -44,7 +44,10 @@
           "REQ-7",
           "REQ-8",
           "REQ-9",
-          "REQ-10"
+          "REQ-10",
+          "REQ-13",
+          "REQ-14",
+          "REQ-15"
         ],
         "synthetic": false,
         "ran": true
@@ -53,7 +56,7 @@
     "quarantined": [],
     "issues": [],
     "granularity": {
-      "owned_by_literal": 24,
+      "owned_by_literal": 27,
       "owned_by_pattern": 0,
       "owned_by_whole": 0,
       "owned_by_tag": 0,
@@ -61,6 +64,42 @@
     }
   },
   "cases": [
+    {
+      "case": "//:validation#assembly_validation::assembly_model_scope",
+      "target": "//:validation",
+      "path": "assembly_validation::assembly_model_scope",
+      "owner": "REQ-14",
+      "via": "model",
+      "status": "skipped",
+      "level": "inspection",
+      "declared": [
+        "REQ-14"
+      ]
+    },
+    {
+      "case": "//:validation#assembly_validation::full_assembly_rf_acceptance",
+      "target": "//:validation",
+      "path": "assembly_validation::full_assembly_rf_acceptance",
+      "owner": "REQ-13",
+      "via": "model",
+      "status": "skipped",
+      "level": "simulation",
+      "declared": [
+        "REQ-13"
+      ]
+    },
+    {
+      "case": "//:validation#assembly_validation::mesh_and_tolerance_convergence",
+      "target": "//:validation",
+      "path": "assembly_validation::mesh_and_tolerance_convergence",
+      "owner": "REQ-15",
+      "via": "model",
+      "status": "skipped",
+      "level": "simulation",
+      "declared": [
+        "REQ-15"
+      ]
+    },
     {
       "case": "//:validation#rf_validation::coarse_REQ-1",
       "target": "//:validation",
@@ -390,7 +429,8 @@
         "REQ-5",
         "REQ-6",
         "REQ-11",
-        "REQ-12"
+        "REQ-12",
+        "REQ-13"
       ],
       "set": {
         "complete": false,
@@ -413,7 +453,8 @@
         "REQ-5",
         "REQ-6",
         "REQ-11",
-        "REQ-12"
+        "REQ-12",
+        "REQ-13"
       ]
     },
     {
@@ -425,7 +466,9 @@
         "REQ-8",
         "REQ-9",
         "REQ-10",
-        "REQ-11"
+        "REQ-11",
+        "REQ-13",
+        "REQ-14"
       ],
       "set": {
         "complete": false,
@@ -444,16 +487,19 @@
         "REQ-8",
         "REQ-9",
         "REQ-10",
-        "REQ-11"
+        "REQ-11",
+        "REQ-13",
+        "REQ-14"
       ]
     },
     {
       "id": "UN-3",
       "title": "Traceable design with reproducible simulation evidence",
-      "status": "VALIDATED",
+      "status": "PARTIAL",
       "basis": "derived",
       "derived_from": [
-        "REQ-7"
+        "REQ-7",
+        "REQ-15"
       ],
       "set": {
         "complete": false,
@@ -469,14 +515,15 @@
       },
       "members": [],
       "requirements": [
-        "REQ-7"
+        "REQ-7",
+        "REQ-15"
       ]
     }
   ],
   "requirements": [
     {
       "id": "REQ-1",
-      "title": "Return loss >=15 dB at each port over 24-32 GHz",
+      "title": "DUT-plane: Return loss >=15 dB at each port over 24-32 GHz",
       "status": "FAILED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -555,7 +602,7 @@
     },
     {
       "id": "REQ-2",
-      "title": "Isolation >=14 dB over 24-32 GHz",
+      "title": "DUT-plane: Isolation >=14 dB over 24-32 GHz",
       "status": "VERIFIED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -631,7 +678,7 @@
     },
     {
       "id": "REQ-3",
-      "title": "Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
+      "title": "DUT-plane: Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
       "status": "FAILED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -710,7 +757,7 @@
     },
     {
       "id": "REQ-4",
-      "title": "Amplitude imbalance <=0.5 dB over 24-32 GHz",
+      "title": "DUT-plane: Amplitude imbalance <=0.5 dB over 24-32 GHz",
       "status": "VERIFIED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -786,7 +833,7 @@
     },
     {
       "id": "REQ-5",
-      "title": "Phase imbalance <=5 degrees over 24-32 GHz",
+      "title": "DUT-plane: Phase imbalance <=5 degrees over 24-32 GHz",
       "status": "VERIFIED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -862,7 +909,7 @@
     },
     {
       "id": "REQ-6",
-      "title": "Equal-phase coherent combining loss <=0.7 dB",
+      "title": "DUT-plane: Equal-phase coherent combining loss <=0.7 dB",
       "status": "FAILED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -941,7 +988,7 @@
     },
     {
       "id": "REQ-7",
-      "title": "Scattering matrix is passive within 0.001 numerical tolerance",
+      "title": "DUT-plane: Scattering matrix is passive within 0.001 numerical tolerance",
       "status": "VERIFIED",
       "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
       "basis": "own",
@@ -1206,6 +1253,145 @@
       "refines": [],
       "implements": [],
       "method": "TM-4"
+    },
+    {
+      "id": "REQ-13",
+      "title": "Whole populated assembly meets every RF acceptance limit at the three coaxial connector planes",
+      "status": "INCOMPLETE",
+      "description": "Mandatory release gate in spec.json assembly_validation. Include fixture losses and actual feeds/bends, launches, finite board, ground/vias and packaged resistor. DUT-only results do not satisfy this requirement.",
+      "basis": "own",
+      "set": {
+        "complete": false,
+        "members": 1,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 1,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#assembly_validation::full_assembly_rf_acceptance",
+          "target": "//:validation",
+          "selector": "assembly_validation::full_assembly_rf_acceptance",
+          "via": "model",
+          "state": "skipped",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "assembly_validation::full_assembly_rf_acceptance",
+          "status": "skipped",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1",
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-5"
+    },
+    {
+      "id": "REQ-14",
+      "title": "Assembly model covers actual geometry, materials, contacts and package parasitics with qualified provenance",
+      "status": "INCOMPLETE",
+      "description": "Include every required_model_scope item in spec.json; missing or idealized launch/package models block assembly validation.",
+      "basis": "own",
+      "set": {
+        "complete": false,
+        "members": 1,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 1,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#assembly_validation::assembly_model_scope",
+          "target": "//:validation",
+          "selector": "assembly_validation::assembly_model_scope",
+          "via": "model",
+          "state": "skipped",
+          "owned": true,
+          "level": "inspection"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "assembly_validation::assembly_model_scope",
+          "status": "skipped",
+          "level": "inspection",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "inspection",
+      "provided_level": null,
+      "satisfies": [
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-6"
+    },
+    {
+      "id": "REQ-15",
+      "title": "Whole-assembly RF results have mesh, time-domain and tolerance convergence evidence",
+      "status": "INCOMPLETE",
+      "description": "Three meshes, configured finest-pair error bounds, converged excitations, numerical checks and vendor-supported tolerance cases required by spec.json.",
+      "basis": "own",
+      "set": {
+        "complete": false,
+        "members": 1,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 1,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#assembly_validation::mesh_and_tolerance_convergence",
+          "target": "//:validation",
+          "selector": "assembly_validation::mesh_and_tolerance_convergence",
+          "via": "model",
+          "state": "skipped",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "assembly_validation::mesh_and_tolerance_convergence",
+          "status": "skipped",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": null,
+      "satisfies": [
+        "UN-3"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-5"
     }
   ],
   "mitigations": [],
@@ -1279,6 +1465,34 @@
       "used_by": [
         "REQ-12"
       ]
+    },
+    {
+      "id": "TM-5",
+      "title": "Complete assembly EM/co-simulation at coaxial connector planes",
+      "status": "PARTIAL",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-13",
+        "REQ-15"
+      ],
+      "level": "simulation",
+      "used_by": [
+        "REQ-13",
+        "REQ-15"
+      ]
+    },
+    {
+      "id": "TM-6",
+      "title": "Assembly model coverage and provenance inspection",
+      "status": "PARTIAL",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-14"
+      ],
+      "level": "inspection",
+      "used_by": [
+        "REQ-14"
+      ]
     }
   ],
   "modules": {},
@@ -1320,6 +1534,27 @@
       "message": "no test evidence",
       "route": "human-gate",
       "demanded_level": "hil"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-13",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-14",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "human-gate",
+      "demanded_level": "inspection"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-15",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "autonomous",
+      "demanded_level": "simulation"
     }
   ]
 }

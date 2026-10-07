@@ -6,7 +6,7 @@ Experimental YAPNR inverse-designed microstrip Wilkinson coupon targeting the Kn
 
 The 40 × 36 mm board uses a 0.51 mm RO4350B core, three Southwest Microwave 1092-03A-6 2.92 mm edge launches, equal-length output feeds and a 100 ohm Vishay CH02016 resistor. J1 is SUM, J2/J3 are the two inputs/outputs. The board shot is a KiCad render of the actual copper and mechanical lands; connectors and resistor are not installed in the render.
 
-- [Requirements model](requirements/model.yaml): 3 user needs, 12 requirements and 4 verification methods.
+- [Requirements model](requirements/model.yaml): 3 user needs, 15 requirements and 6 verification methods.
 - [Validation report](reports/validation.md): acceptance criteria, grid comparison and links to simulation results.
 - [rules_requirements traceability](reports/traceability.md), [HTML](reports/traceability.html), [JSON](reports/traceability.json), [gap queue](reports/gaps.json).
 - [KiCad PCB](output/test-board/rf-combiner-test.kicad_pcb), [project](output/test-board/rf-combiner-test.kicad_pro), [BOM](output/test-board/BOM.csv).
@@ -17,7 +17,15 @@ The 40 × 36 mm board uses a 0.51 mm RO4350B core, three Southwest Microwave 109
 
 The baseline is the [Knowles datasheet](https://www.knowlescapacitors.com/getattachment/Products/Microwave-Products/Power-Dividers/PDW07630_DATASHEET.pdf?lang=en-US), preserved as [reference PDF](reference/PDW07630_DATASHEET.pdf): 24–32 GHz, return loss ≥15 dB, isolation ≥14 dB, excess insertion loss ≤0.7 dB, amplitude balance ±0.5 dB, phase balance ±5°. The combiner is specified for equal-amplitude, equal-phase inputs. Its 5 W combining rating is not qualified for this coupon.
 
-The workflow follows [YAPNR RF inverse design](https://studio-fug.github.io/yapnr/docs/rf-inverse-design.html). The user's final stackup selection superseded the earlier 10 mil option: **0.51 mm core and 2.92 mm launches**. A larger board footprint was accepted. [spec.json](spec.json) holds stricter optimization goals (20 dB return loss, 17 dB isolation, 0.5 dB excess loss); [requirements/model.yaml](requirements/model.yaml) retains the datasheet minimum acceptance thresholds.
+The workflow follows [YAPNR RF inverse design](https://studio-fug.github.io/yapnr/docs/rf-inverse-design.html). The user's final stackup selection superseded the earlier 10 mil option: **0.51 mm core and 2.92 mm launches**. A larger board footprint was accepted. [DUT optimization spec](specs/dut-optimization.json) holds stricter optimization goals (20 dB return loss, 17 dB isolation, 0.5 dB excess loss); [requirements/model.yaml](requirements/model.yaml) retains the datasheet minimum acceptance thresholds.
+
+## Whole-assembly validation gate
+
+[spec.json](spec.json) is the authoritative project specification. It requires simulation of the complete populated assembly at the three 2.92 mm coaxial mating planes, including the actual feed bends, launch transitions, connectors, ground/vias, finite board, material losses and resistor package. All assembly RF limits include fixture losses. DUT-only simulation and DRC cannot satisfy this gate.
+
+**Assembly simulation is BLOCKED, not completed.** [Readiness report](reports/assembly-validation.json) records missing qualified connector/material models, resistor reference-plane qualification and a full-assembly solver adapter. The pinned YAPNR planar model cannot directly represent this complete 3D assembly. A [Vishay 100 ohm candidate model](models/resistor/CH02016F_P_100R.s2p) is included, with [provenance](models/resistor/provenance.json); it has 100 ohm normalization and must be qualified before co-simulation.
+
+Run `python3 scripts/check_assembly_readiness.py` to regenerate the readiness report. It intentionally returns a nonzero exit status until assembly simulation is possible, and never grants validation from readiness alone. REQ-13 through REQ-15 track complete-assembly RF acceptance, model coverage and numerical/tolerance evidence. REQ-11 remains the separate measured bench acceptance requirement.
 
 ## Reproduction
 

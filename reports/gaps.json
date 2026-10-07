@@ -34,6 +34,27 @@
       "message": "no test evidence",
       "route": "human-gate",
       "demanded_level": "hil"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-13",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-14",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "human-gate",
+      "demanded_level": "inspection"
+    },
+    {
+      "kind": "incomplete",
+      "entity": "REQ-15",
+      "message": "0/1 passed; 1 skipped (//:validation)",
+      "route": "autonomous",
+      "demanded_level": "simulation"
     }
   ]
 }

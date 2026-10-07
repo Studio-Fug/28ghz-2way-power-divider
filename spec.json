@@ -1,207 +1,156 @@
 {
-  "schema": "yapnr-rf-spec/1",
-  "name": "pdw07630-comparable-jlc-ro4350b-20mil",
-  "stackup": {
-    "er": 3.66,
-    "tan_delta": 0.0037,
-    "h_mm": 0.51,
-    "f_ref_ghz": 28
+  "schema": "rf-combiner-project-spec/1",
+  "name": "28ghz-2way-power-divider",
+  "dut_optimization_spec": "specs/dut-optimization.json",
+  "design_artifacts": {
+    "board": "output/test-board/rf-combiner-test.kicad_pcb",
+    "bom": "output/test-board/BOM.csv",
+    "footprint": "runs/jlc20mil/footprint.kicad_mod"
   },
-  "grid": {
-    "pitch_mm": 0.15,
-    "substrate_cells": 4,
-    "air_mm": null,
-    "dz_max_mm": null,
-    "margin_mm": null,
-    "meas_cells": null,
-    "src_cells": null,
-    "pml_gap": 3,
-    "core_cells": 2,
-    "pml_cells": 10,
-    "pml_top_cells": 8,
-    "ratio": 1.25,
-    "courant": 0.95,
-    "f_max_ghz": null
-  },
-  "design_region": {
-    "x_mm": [
-      0,
-      6
+  "requirements_model": "requirements/model.yaml",
+  "assembly_validation": {
+    "required": true,
+    "scope": "Complete populated PCB assembly",
+    "band_ghz": [
+      24,
+      32
     ],
-    "y_mm": [
-      -3,
-      3
-    ]
-  },
-  "symmetry": "mirror_y",
-  "rules": {
-    "min_width_mm": 0.3,
-    "min_space_mm": 0.3
-  },
-  "ports": [
-    {
-      "n": 1,
-      "side": "W",
-      "at_mm": 0,
-      "width_cells": null
+    "minimum_sweep_points": 81,
+    "reference_impedance_ohm": 50,
+    "reference_planes": {
+      "definition": "Coaxial mating/calibration planes of the three installed 2.92 mm connectors",
+      "ports": [
+        {
+          "n": 1,
+          "reference": "J1",
+          "function": "SUM"
+        },
+        {
+          "n": 2,
+          "reference": "J2",
+          "function": "IN A"
+        },
+        {
+          "n": 3,
+          "reference": "J3",
+          "function": "IN B"
+        }
+      ],
+      "excitation": "All three calibrated coaxial fundamental modes; all unexcited ports terminated in 50 ohm"
     },
-    {
-      "n": 2,
-      "side": "E",
-      "at_mm": 2.1,
-      "width_cells": null
-    },
-    {
-      "n": 3,
-      "side": "E",
-      "at_mm": -2.1,
-      "width_cells": null
-    }
-  ],
-  "bands": {
-    "pass": {
-      "lo_ghz": 24,
-      "hi_ghz": 32,
-      "points": 9
-    }
-  },
-  "requirements": [
-    {
-      "s": [
-        1,
-        1
-      ],
-      "max_db": -20,
-      "band": "pass"
-    },
-    {
-      "s": [
-        2,
-        1
-      ],
-      "min_db": -3.5103,
-      "band": "pass"
-    },
-    {
-      "s": [
-        3,
-        1
-      ],
-      "min_db": -3.5103,
-      "band": "pass"
-    },
-    {
-      "s": [
-        2,
-        2
-      ],
-      "max_db": -20,
-      "band": "pass"
-    },
-    {
-      "s": [
-        3,
-        2
-      ],
-      "max_db": -17,
-      "band": "pass"
-    },
-    {
-      "absorbed": 2,
-      "element": "R1",
-      "min": 0.4,
-      "band": "pass"
-    }
-  ],
-  "fixed": [
-    {
-      "x_mm": [
-        2.4,
-        6
-      ],
-      "y_mm": [
-        -0.15,
-        0.15
-      ],
-      "value": 0
-    },
-    {
-      "x_mm": [
-        0.6,
-        2.1
-      ],
-      "y_mm": [
-        -0.15,
-        0.15
-      ],
-      "value": 0
-    }
-  ],
-  "optimizer": {
-    "betas": [
-      8,
-      16,
-      32,
-      64
+    "required_model_scope": [
+      "Exact exported DUT copper and solder attachment",
+      "All microstrip feeds, actual bend shapes and pin-to-line tapers",
+      "All three 1092-03A-6 connectors: pins, dielectric, shells, mounting blocks and contacts",
+      "Finite board edges, 0.51 mm RO4350B core and actual ground geometry",
+      "Ground rails, plated vias, NPTH holes, connector clamps and mounting hardware",
+      "Finite copper thickness and conductivity; laminate loss, copper roughness and ENIG",
+      "Actual soldermask openings and dielectric loading",
+      "CH02016 100 ohm resistor package and its parasitics, without counting its pads twice"
     ],
-    "iterations_per_beta": [
-      35,
-      15,
-      15,
-      10
-    ],
-    "min_iterations": 8,
-    "budget_min": 120,
-    "move": 0.2,
-    "move_late": 0.05,
-    "init": 0.5,
-    "eta": 0.5,
-    "tau": 0.05,
-    "aggregate": "excitation",
-    "damping": 0.0,
-    "interpolation": "resistive",
-    "reactive_damping": 0.1,
-    "conservative": false,
-    "max_inner": 5,
-    "filter_radius_mm": null,
-    "seed": "feeds",
-    "binary_every": 5,
-    "eta_variants": [
-      0.45,
-      0.55
-    ],
-    "robust_from_beta": 16.0,
-    "adaptive_move": true,
-    "adaptive_from_beta": 16.0,
-    "trust_reference": "best"
-  },
-  "solver": {
-    "backend": "native",
-    "dtype": "float64",
-    "tol": 0.001,
-    "adjoint_tol": 0.001,
-    "decimation": "auto",
-    "max_steps": 200000,
-    "threads": 2,
-    "sweep_points": 81,
-    "edge_correction": true,
-    "port_source": "mode",
-    "port_extraction": "modal"
-  },
-  "lumped": [
-    {
-      "name": "R1",
-      "x_mm": [
-        2.1,
-        2.4
+    "stackup": {
+      "core_material": "RO4350B",
+      "core_mm": 0.51,
+      "nominal_copper_um": 35,
+      "nominal_finished_board_mm": 0.65,
+      "er_design": 3.66,
+      "tan_delta_nominal": 0.0037,
+      "finish": "ENIG",
+      "fabricated_stackup_confirmation_required": true
+    },
+    "assembly_models": {
+      "connector": {
+        "part": "1092-03A-6",
+        "geometry_or_em_model": null,
+        "status": "missing_rf_model",
+        "available_mechanical_drawing": "reference/1092-03A-6.pdf",
+        "mechanical_outline_alone_sufficient": false
+      },
+      "resistor": {
+        "part": "CH02016-100RGFTF",
+        "candidate_sparameters": "models/resistor/CH02016F_P_100R.s2p",
+        "provenance": "models/resistor/provenance.json",
+        "qualified": false,
+        "required_checks": [
+          "Reference-plane location",
+          "Frequency coverage through 32 GHz",
+          "Impedance normalization",
+          "Mounting configuration matches active-face-down assembly",
+          "No duplicate pad/fixture parasitics"
+        ]
+      },
+      "materials": {
+        "qualified_properties": null,
+        "required": [
+          "Copper conductivity and roughness",
+          "ENIG thickness and electrical properties",
+          "Soldermask thickness, permittivity and loss",
+          "Connector internal dielectric properties",
+          "Solder and contacts",
+          "Fabricated stackup and tolerances"
+        ]
+      }
+    },
+    "solver": {
+      "required_capabilities": [
+        "3D conductors and dielectrics",
+        "Coaxial modal ports",
+        "Finite substrate, finite ground, vias and contacts",
+        "Packaged resistor or verified EM/circuit co-simulation",
+        "Conductor and dielectric losses"
       ],
-      "y_mm": [
-        -0.15,
-        0.15
+      "backend": null,
+      "adapter": null,
+      "pinned_yapnr_native_sufficient": false,
+      "capability_note": "Pinned planar YAPNR BoardSpec has a finite rectangular substrate, planar copper/ground and lumped board ports; it cannot directly represent this full assembly."
+    },
+    "acceptance": {
+      "return_loss_min_db_all_ports": 15,
+      "isolation_min_db_both_directions": 14,
+      "excess_insertion_loss_max_db_all_sum_branches": 0.7,
+      "amplitude_imbalance_max_db": 0.5,
+      "phase_imbalance_max_deg": 5,
+      "coherent_combining_loss_max_db": 0.7,
+      "coherent_inputs": "Equal amplitude and phase at J2/J3 coaxial reference planes",
+      "fixture_loss_included": true,
+      "fixture_deembedding_allowed_for_acceptance": false
+    },
+    "numerical_validation": {
+      "minimum_meshes": 3,
+      "finest_pair_max_s_magnitude_change_db": 0.2,
+      "finest_pair_max_relative_branch_phase_change_deg": 1,
+      "convergence_threshold_basis": "Project engineering acceptance, not manufacturer datasheet limits",
+      "passivity_min_eigenvalue_tolerance": -0.001,
+      "maximum_absolute_reciprocity_error": 0.01,
+      "all_port_time_domain_runs_must_converge": true,
+      "frequency_refinement_required_near_threshold_crossings": true
+    },
+    "tolerance_validation": {
+      "required": true,
+      "cases": [
+        "Laminate thickness and permittivity",
+        "Etch width and registration",
+        "Resistor and mounting parasitics",
+        "Connector seating and contact variation"
       ],
-      "axis": "y",
-      "ohms": 100,
-      "pad_mm": 0.3
-    }
-  ]
+      "ranges": "Use vendor-supported manufacturing limits; no invented ranges"
+    },
+    "required_evidence": [
+      "Full complex 3-port Touchstone at connector planes",
+      "Geometry and material model files with provenance and hashes",
+      "Mesh and time-domain convergence logs",
+      "All RF metrics compared with connector-plane limits",
+      "Tolerance-corner results",
+      "Solver version, settings and reproducible invocation"
+    ],
+    "release_gate": {
+      "dut_only_simulation_sufficient": false,
+      "drc_alone_sufficient": false,
+      "ideal_launches_or_ideal_resistor_sufficient": false,
+      "missing_required_model_action": "BLOCK assembly validation; never report a substituted planar/DUT model as whole-assembly validation",
+      "bench_measurement_requirement": "REQ-11",
+      "power_qualification_is_separate": true
+    },
+    "report": "reports/assembly-validation.json"
+  }
 }

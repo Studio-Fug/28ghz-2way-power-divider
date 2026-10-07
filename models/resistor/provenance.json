@@ -1,0 +1,15 @@
+{
+  "manufacturer": "Vishay",
+  "source": "https://www.vishay.com/doc?53061",
+  "archive_member": "CH02016F_P/CH02016F_P_100R.s2p",
+  "sha256": "04365104109f382cf6ac035bef9b9808464a01361509d73b67b0dd7b89ce4cca",
+  "applicability": "CH02016, F/P terminations, 100 ohm; verify reference planes, normalization, mounting and pad subtraction before assembly co-simulation",
+  "qualified_for_assembly": false,
+  "source_member_sha256": "69fe7adaf409e8bd0e7cfb4f6abc823f09263d8899506be8515f7d2c904d7c0a",
+  "formatting_normalization": "LF line endings and trailing whitespace removed; numerical content unchanged",
+  "reference_impedance_ohm": 100,
+  "frequency_range_ghz": [
+    1.0,
+    70.0
+  ]
+}
