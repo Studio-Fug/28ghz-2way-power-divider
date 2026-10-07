@@ -1,0 +1,13 @@
+yapnr.rf native FDTD: /opt/venv/lib/python3.11/site-packages/yapnr/rf/libyapnr_fdtd.so (arm64 neon; gcc 13.3.0)
+calibrated a 8-cell feed in 0.0 s
+FDTD backend: native float64, 2 thread(s) (libyapnr_fdtd.so, arm64 neon)
+re-simulated pdw07630-comparable-jlc-ro4350b-20mil at refine 1 (258704 cells): 32.8 s
+coarse {"pitch_mm": 0.15, "substrate_cells": 4, "return_loss_min_db_per_port": [12.643721220497714, 14.610223022129599, 14.610223022130008], "isolation_min_db": 14.901326451847439, "excess_loss_max_db": 0.7957604625884325, "coherent_combining_loss_max_db": 0.7691722179703759, "amplitude_imbalance_max_db": 4.369837824924616e-13, "phase_imbalance_max_deg": 6.29820043754821e-11, "passivity_margin_min": 0.06437094533611785, "reciprocity_error_max": 0.003741017691871021, "wall_s": 36.559836368018296, "steps": {"1": 5223, "2": 5419, "3": 5419}, "meets_datasheet_small_signal_limits": false}
+calibrated a 16-cell feed in 25.1 s
+FDTD backend: native float64, 2 thread(s) (libyapnr_fdtd.so, arm64 neon)
+re-simulated pdw07630-comparable-jlc-ro4350b-20mil at refine 2 (883376 cells): 136.7 s
+fine {"pitch_mm": 0.075, "substrate_cells": 6, "return_loss_min_db_per_port": [11.929100539083946, 14.13139508009607, 14.13139508009522], "isolation_min_db": 14.88965882694317, "excess_loss_max_db": 0.845783048462776, "coherent_combining_loss_max_db": 0.8195787944013638, "amplitude_imbalance_max_db": 2.6352253712502716e-12, "phase_imbalance_max_deg": 9.011566202427133e-11, "passivity_margin_min": 0.06419989001551668, "reciprocity_error_max": 0.003844218612073385, "wall_s": 163.37431653600652, "steps": {"1": 9544, "2": 10660, "3": 10660}, "meets_datasheet_small_signal_limits": false}
+calibrated a 24-cell feed in 65.8 s
+FDTD backend: native float64, 2 thread(s) (libyapnr_fdtd.so, arm64 neon)
+re-simulated pdw07630-comparable-jlc-ro4350b-20mil at refine 3 (2015152 cells): 417.7 s
+finer {"pitch_mm": 0.049999999999999996, "substrate_cells": 8, "return_loss_min_db_per_port": [11.822555861296191, 14.020467339715182, 14.020467339710052], "isolation_min_db": 14.874722431035297, "excess_loss_max_db": 0.86237582756605, "coherent_combining_loss_max_db": 0.838400833755864, "amplitude_imbalance_max_db": 7.248868172382572e-12, "phase_imbalance_max_deg": 2.542060705465799e-10, "passivity_margin_min": 0.06510062520897487, "reciprocity_error_max": 0.003513440984537335, "wall_s": 484.9989457880147, "steps": {"1": 14643, "2": 15741, "3": 15741}, "meets_datasheet_small_signal_limits": false}

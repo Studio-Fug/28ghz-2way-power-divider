@@ -1,0 +1,39 @@
+{
+  "queue": [
+    {
+      "kind": "failed",
+      "entity": "REQ-1",
+      "message": "failing evidence: rf_validation::coarse_REQ-1, rf_validation::fine_REQ-1, rf_validation::finer_REQ-1",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "failed",
+      "entity": "REQ-3",
+      "message": "failing evidence: rf_validation::coarse_REQ-3, rf_validation::fine_REQ-3, rf_validation::finer_REQ-3",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "failed",
+      "entity": "REQ-6",
+      "message": "failing evidence: rf_validation::coarse_REQ-6, rf_validation::fine_REQ-6, rf_validation::finer_REQ-6",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "unverified",
+      "entity": "REQ-11",
+      "message": "no test evidence",
+      "route": "human-gate",
+      "demanded_level": "hil"
+    },
+    {
+      "kind": "unverified",
+      "entity": "REQ-12",
+      "message": "no test evidence",
+      "route": "human-gate",
+      "demanded_level": "hil"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "yapnr-rf-spec/1",
+  "name": "pdw07630-comparable-jlc-ro4350b-20mil",
+  "stackup": {
+    "er": 3.66,
+    "tan_delta": 0.0037,
+    "h_mm": 0.51,
+    "f_ref_ghz": 28
+  },
+  "grid": {
+    "pitch_mm": 0.15,
+    "substrate_cells": 4,
+    "air_mm": null,
+    "dz_max_mm": null,
+    "margin_mm": null,
+    "meas_cells": null,
+    "src_cells": null,
+    "pml_gap": 3,
+    "core_cells": 2,
+    "pml_cells": 10,
+    "pml_top_cells": 8,
+    "ratio": 1.25,
+    "courant": 0.95,
+    "f_max_ghz": null
+  },
+  "design_region": {
+    "x_mm": [
+      0,
+      6
+    ],
+    "y_mm": [
+      -3,
+      3
+    ]
+  },
+  "symmetry": "mirror_y",
+  "rules": {
+    "min_width_mm": 0.3,
+    "min_space_mm": 0.3
+  },
+  "ports": [
+    {
+      "n": 1,
+      "side": "W",
+      "at_mm": 0,
+      "width_cells": null
+    },
+    {
+      "n": 2,
+      "side": "E",
+      "at_mm": 2.1,
+      "width_cells": null
+    },
+    {
+      "n": 3,
+      "side": "E",
+      "at_mm": -2.1,
+      "width_cells": null
+    }
+  ],
+  "bands": {
+    "pass": {
+      "lo_ghz": 24,
+      "hi_ghz": 32,
+      "points": 9
+    }
+  },
+  "requirements": [
+    {
+      "s": [
+        1,
+        1
+      ],
+      "max_db": -20,
+      "band": "pass"
+    },
+    {
+      "s": [
+        2,
+        1
+      ],
+      "min_db": -3.5103,
+      "band": "pass"
+    },
+    {
+      "s": [
+        3,
+        1
+      ],
+      "min_db": -3.5103,
+      "band": "pass"
+    },
+    {
+      "s": [
+        2,
+        2
+      ],
+      "max_db": -20,
+      "band": "pass"
+    },
+    {
+      "s": [
+        3,
+        2
+      ],
+      "max_db": -17,
+      "band": "pass"
+    },
+    {
+      "absorbed": 2,
+      "element": "R1",
+      "min": 0.4,
+      "band": "pass"
+    }
+  ],
+  "fixed": [
+    {
+      "x_mm": [
+        2.4,
+        6
+      ],
+      "y_mm": [
+        -0.15,
+        0.15
+      ],
+      "value": 0
+    },
+    {
+      "x_mm": [
+        0.6,
+        2.1
+      ],
+      "y_mm": [
+        -0.15,
+        0.15
+      ],
+      "value": 0
+    }
+  ],
+  "optimizer": {
+    "betas": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "iterations_per_beta": [
+      35,
+      15,
+      15,
+      10
+    ],
+    "min_iterations": 8,
+    "budget_min": 120,
+    "move": 0.2,
+    "move_late": 0.05,
+    "init": 0.5,
+    "eta": 0.5,
+    "tau": 0.05,
+    "aggregate": "excitation",
+    "damping": 0.0,
+    "interpolation": "resistive",
+    "reactive_damping": 0.1,
+    "conservative": false,
+    "max_inner": 5,
+    "filter_radius_mm": null,
+    "seed": "feeds",
+    "binary_every": 5,
+    "eta_variants": [
+      0.45,
+      0.55
+    ],
+    "robust_from_beta": 16.0,
+    "adaptive_move": true,
+    "adaptive_from_beta": 16.0,
+    "trust_reference": "best"
+  },
+  "solver": {
+    "backend": "native",
+    "dtype": "float64",
+    "tol": 0.001,
+    "adjoint_tol": 0.001,
+    "decimation": "auto",
+    "max_steps": 200000,
+    "threads": 2,
+    "sweep_points": 81,
+    "edge_correction": true,
+    "port_source": "mode",
+    "port_extraction": "modal"
+  },
+  "lumped": [
+    {
+      "name": "R1",
+      "x_mm": [
+        2.1,
+        2.4
+      ],
+      "y_mm": [
+        -0.15,
+        0.15
+      ],
+      "axis": "y",
+      "ohms": 100,
+      "pad_mm": 0.3
+    }
+  ]
+}

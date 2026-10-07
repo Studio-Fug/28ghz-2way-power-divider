@@ -1,0 +1,241 @@
+{
+  "user_needs": [
+    {
+      "id": "UN-1",
+      "title": "Comparable small-signal two-way 24-32 GHz combiner"
+    },
+    {
+      "id": "UN-2",
+      "title": "JLC-compatible test coupon using 0.51 mm core and 2.92 mm launches"
+    },
+    {
+      "id": "UN-3",
+      "title": "Traceable design with reproducible simulation evidence"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "title": "Return loss >=15 dB at each port over 24-32 GHz",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-1",
+            "rf_validation::fine_REQ-1",
+            "rf_validation::finer_REQ-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "title": "Isolation >=14 dB over 24-32 GHz",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-2",
+            "rf_validation::fine_REQ-2",
+            "rf_validation::finer_REQ-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "title": "Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-3",
+            "rf_validation::fine_REQ-3",
+            "rf_validation::finer_REQ-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "title": "Amplitude imbalance <=0.5 dB over 24-32 GHz",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-4",
+            "rf_validation::fine_REQ-4",
+            "rf_validation::finer_REQ-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "title": "Phase imbalance <=5 degrees over 24-32 GHz",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-5",
+            "rf_validation::fine_REQ-5",
+            "rf_validation::finer_REQ-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "title": "Equal-phase coherent combining loss <=0.7 dB",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-6",
+            "rf_validation::fine_REQ-6",
+            "rf_validation::finer_REQ-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "title": "Scattering matrix is passive within 0.001 numerical tolerance",
+      "satisfies": [
+        "UN-3"
+      ],
+      "method": "TM-1",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::coarse_REQ-7",
+            "rf_validation::fine_REQ-7",
+            "rf_validation::finer_REQ-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "title": "40 x 36 mm two-layer RO4350B coupon with 0.51 mm core",
+      "satisfies": [
+        "UN-2"
+      ],
+      "method": "TM-2",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::core_and_outline"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "title": "Three 1092-03A-6 2.92 mm edge-launch footprints and microstrip feeds",
+      "satisfies": [
+        "UN-2"
+      ],
+      "method": "TM-2",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::launch_footprints"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "title": "Zero native KiCad DRC violations and unconnected items",
+      "satisfies": [
+        "UN-2"
+      ],
+      "method": "TM-2",
+      "verified_by": [
+        {
+          "target": "//:validation",
+          "cases": [
+            "rf_validation::native_drc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "title": "Complete fixture meets RF limits at calibrated connector reference planes",
+      "satisfies": [
+        "UN-1",
+        "UN-2"
+      ],
+      "method": "TM-3",
+      "description": "Not simulated or measured: launches, feeds, packaged resistor, finish and tolerances require bench verification."
+    },
+    {
+      "id": "REQ-12",
+      "title": "Qualify 5 W coherent combining under specified thermal conditions",
+      "satisfies": [
+        "UN-1"
+      ],
+      "method": "TM-4",
+      "description": "No power or thermal qualification. Present resistor is intended for small-signal VNA tests only."
+    }
+  ],
+  "test_methods": [
+    {
+      "id": "TM-1",
+      "title": "Exported-footprint native FDTD on three grids",
+      "level": "simulation",
+      "description": "81 frequencies from 24 to 32 GHz; 50 ohm renormalization; inspect reports/validation.md for limitations."
+    },
+    {
+      "id": "TM-2",
+      "title": "KiCad native DRC and geometry inspection",
+      "level": "inspection"
+    },
+    {
+      "id": "TM-3",
+      "title": "Calibrated three-port VNA measurement",
+      "level": "hil"
+    },
+    {
+      "id": "TM-4",
+      "title": "Controlled-power thermal qualification",
+      "level": "hil"
+    }
+  ]
+}

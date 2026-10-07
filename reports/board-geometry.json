@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "main_island_vertices": 155,
+  "floating_islands": 2,
+  "comparison": "Exact decimal coordinate equality in footprint-local coordinates; port pad anchors retained",
+  "source": "runs/jlc20mil/footprint.kicad_mod",
+  "board": "output/test-board/rf-combiner-test.kicad_pcb"
+}

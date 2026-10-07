@@ -1,0 +1,14 @@
+{
+  "spec.json": "94037f0affd8bd34b17abea5c24a038f150f82a45867557a7a3d01347c7a2c75",
+  "runs/jlc20mil/footprint.kicad_mod": "9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c",
+  "runs/jlc20mil/result.json": "979e1859f72996854fb9688dca2d7cd7ff7937d5bcff9123ba1477bdfcfdb9bc",
+  "runs/jlc20mil/comparison.json": "1c24678abbcfa20a8159c51321c2ddb70e0fd352a3aecc087dad69ece59fbd87",
+  "output/test-board/rf-combiner-test.kicad_pcb": "81d80c9a6969556d9a3a463f8a0e7456023fb9c7c986808347c8bb7bd653c6e8",
+  "output/test-board/drc.json": "93f933ca3b2995f27c77bff4bc0ab4b482a4b3d556148063205ec1099b286fd5",
+  "runs/jlc20mil/fine-validated.s3p": "499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd",
+  "runs/jlc20mil/finer-validated.s3p": "c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f",
+  "runs/jlc20mil/coarse-validated.s3p": "f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd",
+  "runs/jlc20mil/finer-validated.npz": "8101ca9c75be2f5f30b6fa26f39db99150bb618626e59df342c4a98ba6458621",
+  "runs/jlc20mil/fine-validated.npz": "010fad3e40d2a7daa0254d2e1cd4dd99a8f6d18366af03f40a21cf801cbff60c",
+  "runs/jlc20mil/coarse-validated.npz": "a5ff221338347ad86a80cfcd72406fe220629978b12178244e45321fbe7b55c2"
+}

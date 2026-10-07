@@ -1,0 +1,3 @@
+Reference,Qty,Value,Manufacturer,Part,Assembly
+J1 J2 J3,3,2.92mm 40GHz edge launch,Southwest Microwave,1092-03A-6,Manual clamp installation
+R1,1,100 ohm 70GHz thin-film resistor,Vishay Sfernice,CH02016-100RGFTF,Manual active face down; pads 4 and 5 of RF1

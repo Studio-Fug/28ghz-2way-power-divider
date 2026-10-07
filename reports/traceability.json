@@ -1,0 +1,1325 @@
+{
+  "schema": "rules_requirements/report/v2",
+  "title": "28 GHz two-way divider revision A",
+  "project": {},
+  "summary": {
+    "user_needs": 3,
+    "user_needs_validated": 1,
+    "requirements": 12,
+    "requirements_verified": 7,
+    "requirements_under_verified": 0,
+    "requirements_partial": 0,
+    "requirements_failed": 3,
+    "requirements_unverified": 2,
+    "requirements_incomplete": 0,
+    "requirements_invalid": 0,
+    "risks": 0,
+    "risks_mitigated": 0,
+    "mitigations": 0,
+    "mitigations_verified": 0,
+    "test_cases": 24,
+    "test_cases_owned": 24,
+    "test_cases_unowned": 0,
+    "test_cases_quarantined": 0,
+    "gaps": 5
+  },
+  "attribution": {
+    "mode": "hybrid",
+    "main_repo": "",
+    "variants": [],
+    "lock": "requirements/verification.rrlock",
+    "lane": null,
+    "targets": {
+      "//:validation": {
+        "cases": 24,
+        "owned": 24,
+        "quarantined": 0,
+        "owners": [
+          "REQ-1",
+          "REQ-2",
+          "REQ-3",
+          "REQ-4",
+          "REQ-5",
+          "REQ-6",
+          "REQ-7",
+          "REQ-8",
+          "REQ-9",
+          "REQ-10"
+        ],
+        "synthetic": false,
+        "ran": true
+      }
+    },
+    "quarantined": [],
+    "issues": [],
+    "granularity": {
+      "owned_by_literal": 24,
+      "owned_by_pattern": 0,
+      "owned_by_whole": 0,
+      "owned_by_tag": 0,
+      "coarse_claims": 0
+    }
+  },
+  "cases": [
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-1",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-1",
+      "owner": "REQ-1",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-1"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-2",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-2",
+      "owner": "REQ-2",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-2"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-3",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-3",
+      "owner": "REQ-3",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-3"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-4",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-4",
+      "owner": "REQ-4",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-4"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-5",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-5",
+      "owner": "REQ-5",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-5"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-6",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-6",
+      "owner": "REQ-6",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-6"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::coarse_REQ-7",
+      "target": "//:validation",
+      "path": "rf_validation::coarse_REQ-7",
+      "owner": "REQ-7",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-7"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::core_and_outline",
+      "target": "//:validation",
+      "path": "rf_validation::core_and_outline",
+      "owner": "REQ-8",
+      "via": "model",
+      "status": "passed",
+      "level": "inspection",
+      "declared": [
+        "REQ-8"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-1",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-1",
+      "owner": "REQ-1",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-1"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-2",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-2",
+      "owner": "REQ-2",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-2"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-3",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-3",
+      "owner": "REQ-3",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-3"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-4",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-4",
+      "owner": "REQ-4",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-4"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-5",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-5",
+      "owner": "REQ-5",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-5"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-6",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-6",
+      "owner": "REQ-6",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-6"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::fine_REQ-7",
+      "target": "//:validation",
+      "path": "rf_validation::fine_REQ-7",
+      "owner": "REQ-7",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-7"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-1",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-1",
+      "owner": "REQ-1",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-1"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-2",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-2",
+      "owner": "REQ-2",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-2"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-3",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-3",
+      "owner": "REQ-3",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-3"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-4",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-4",
+      "owner": "REQ-4",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-4"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-5",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-5",
+      "owner": "REQ-5",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-5"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-6",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-6",
+      "owner": "REQ-6",
+      "via": "model",
+      "status": "failed",
+      "level": "simulation",
+      "declared": [
+        "REQ-6"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::finer_REQ-7",
+      "target": "//:validation",
+      "path": "rf_validation::finer_REQ-7",
+      "owner": "REQ-7",
+      "via": "model",
+      "status": "passed",
+      "level": "simulation",
+      "declared": [
+        "REQ-7"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::launch_footprints",
+      "target": "//:validation",
+      "path": "rf_validation::launch_footprints",
+      "owner": "REQ-9",
+      "via": "model",
+      "status": "passed",
+      "level": "inspection",
+      "declared": [
+        "REQ-9"
+      ]
+    },
+    {
+      "case": "//:validation#rf_validation::native_drc",
+      "target": "//:validation",
+      "path": "rf_validation::native_drc",
+      "owner": "REQ-10",
+      "via": "model",
+      "status": "passed",
+      "level": "inspection",
+      "declared": [
+        "REQ-10"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "name": "analysis",
+      "rank": 1
+    },
+    {
+      "name": "simulation",
+      "rank": 2
+    },
+    {
+      "name": "sil",
+      "rank": 3
+    },
+    {
+      "name": "hil",
+      "rank": 4
+    },
+    {
+      "name": "hitl",
+      "rank": 5
+    },
+    {
+      "name": "inspection",
+      "rank": null
+    }
+  ],
+  "user_needs": [
+    {
+      "id": "UN-1",
+      "title": "Comparable small-signal two-way 24-32 GHz combiner",
+      "status": "FAILED",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-11",
+        "REQ-12"
+      ],
+      "set": {
+        "complete": false,
+        "members": 0,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [],
+      "requirements": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-11",
+        "REQ-12"
+      ]
+    },
+    {
+      "id": "UN-2",
+      "title": "JLC-compatible test coupon using 0.51 mm core and 2.92 mm launches",
+      "status": "PARTIAL",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-8",
+        "REQ-9",
+        "REQ-10",
+        "REQ-11"
+      ],
+      "set": {
+        "complete": false,
+        "members": 0,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [],
+      "requirements": [
+        "REQ-8",
+        "REQ-9",
+        "REQ-10",
+        "REQ-11"
+      ]
+    },
+    {
+      "id": "UN-3",
+      "title": "Traceable design with reproducible simulation evidence",
+      "status": "VALIDATED",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-7"
+      ],
+      "set": {
+        "complete": false,
+        "members": 0,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [],
+      "requirements": [
+        "REQ-7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "title": "Return loss >=15 dB at each port over 24-32 GHz",
+      "status": "FAILED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 0,
+        "failed": 3,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-1",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-1",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-1",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-1",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-1",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-1",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-1",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "minimum per-port return loss: [12.643721220497714, 14.610223022129599, 14.610223022130008]; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/return_loss_min_db_per_port"
+        },
+        {
+          "name": "rf_validation::fine_REQ-1",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "minimum per-port return loss: [11.929100539083946, 14.13139508009607, 14.13139508009522]; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/return_loss_min_db_per_port"
+        },
+        {
+          "name": "rf_validation::finer_REQ-1",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "minimum per-port return loss: [11.822555861296191, 14.020467339715182, 14.020467339710052]; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/return_loss_min_db_per_port"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-2",
+      "title": "Isolation >=14 dB over 24-32 GHz",
+      "status": "VERIFIED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 3,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-2",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-2",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-2",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-2",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-2",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-2",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-2",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::fine_REQ-2",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::finer_REQ-2",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": "simulation",
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-3",
+      "title": "Excess insertion loss <=0.7 dB in both directions over 24-32 GHz",
+      "status": "FAILED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 0,
+        "failed": 3,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-3",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-3",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-3",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-3",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-3",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-3",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-3",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum excess loss: 0.7957604625884325; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/excess_loss_max_db"
+        },
+        {
+          "name": "rf_validation::fine_REQ-3",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum excess loss: 0.845783048462776; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/excess_loss_max_db"
+        },
+        {
+          "name": "rf_validation::finer_REQ-3",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum excess loss: 0.86237582756605; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/excess_loss_max_db"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-4",
+      "title": "Amplitude imbalance <=0.5 dB over 24-32 GHz",
+      "status": "VERIFIED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 3,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-4",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-4",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-4",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-4",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-4",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-4",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-4",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::fine_REQ-4",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::finer_REQ-4",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": "simulation",
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-5",
+      "title": "Phase imbalance <=5 degrees over 24-32 GHz",
+      "status": "VERIFIED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 3,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-5",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-5",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-5",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-5",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-5",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-5",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-5",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::fine_REQ-5",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::finer_REQ-5",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": "simulation",
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-6",
+      "title": "Equal-phase coherent combining loss <=0.7 dB",
+      "status": "FAILED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 0,
+        "failed": 3,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-6",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-6",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-6",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-6",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-6",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-6",
+          "via": "model",
+          "state": "failed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-6",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum coherent loss: 0.7691722179703759; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/coherent_combining_loss_max_db"
+        },
+        {
+          "name": "rf_validation::fine_REQ-6",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum coherent loss: 0.8195787944013638; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/coherent_combining_loss_max_db"
+        },
+        {
+          "name": "rf_validation::finer_REQ-6",
+          "status": "failed",
+          "level": "simulation",
+          "target": "//:validation",
+          "message": "maximum coherent loss: 0.838400833755864; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/coherent_combining_loss_max_db"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-7",
+      "title": "Scattering matrix is passive within 0.001 numerical tolerance",
+      "status": "VERIFIED",
+      "description": "Simulation-only acceptance. Physical equivalence requires REQ-11.",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 3,
+        "passed": 3,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::coarse_REQ-7",
+          "target": "//:validation",
+          "selector": "rf_validation::coarse_REQ-7",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::fine_REQ-7",
+          "target": "//:validation",
+          "selector": "rf_validation::fine_REQ-7",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        },
+        {
+          "case": "//:validation#rf_validation::finer_REQ-7",
+          "target": "//:validation",
+          "selector": "rf_validation::finer_REQ-7",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "simulation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::coarse_REQ-7",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::fine_REQ-7",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        },
+        {
+          "name": "rf_validation::finer_REQ-7",
+          "status": "passed",
+          "level": "simulation",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "simulation",
+      "provided_level": "simulation",
+      "satisfies": [
+        "UN-3"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-1"
+    },
+    {
+      "id": "REQ-8",
+      "title": "40 x 36 mm two-layer RO4350B coupon with 0.51 mm core",
+      "status": "VERIFIED",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 1,
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::core_and_outline",
+          "target": "//:validation",
+          "selector": "rf_validation::core_and_outline",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "inspection"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::core_and_outline",
+          "status": "passed",
+          "level": "inspection",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "inspection",
+      "provided_level": "inspection",
+      "satisfies": [
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-2"
+    },
+    {
+      "id": "REQ-9",
+      "title": "Three 1092-03A-6 2.92 mm edge-launch footprints and microstrip feeds",
+      "status": "VERIFIED",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 1,
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::launch_footprints",
+          "target": "//:validation",
+          "selector": "rf_validation::launch_footprints",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "inspection"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::launch_footprints",
+          "status": "passed",
+          "level": "inspection",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "inspection",
+      "provided_level": "inspection",
+      "satisfies": [
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-2"
+    },
+    {
+      "id": "REQ-10",
+      "title": "Zero native KiCad DRC violations and unconnected items",
+      "status": "VERIFIED",
+      "basis": "own",
+      "set": {
+        "complete": true,
+        "members": 1,
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [
+        {
+          "case": "//:validation#rf_validation::native_drc",
+          "target": "//:validation",
+          "selector": "rf_validation::native_drc",
+          "via": "model",
+          "state": "passed",
+          "owned": true,
+          "level": "inspection"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "rf_validation::native_drc",
+          "status": "passed",
+          "level": "inspection",
+          "target": "//:validation"
+        }
+      ],
+      "demanded_level": "inspection",
+      "provided_level": "inspection",
+      "satisfies": [
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-2"
+    },
+    {
+      "id": "REQ-11",
+      "title": "Complete fixture meets RF limits at calibrated connector reference planes",
+      "status": "UNVERIFIED",
+      "description": "Not simulated or measured: launches, feeds, packaged resistor, finish and tolerances require bench verification.",
+      "basis": "own",
+      "set": {
+        "complete": false,
+        "members": 0,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [],
+      "demanded_level": "hil",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1",
+        "UN-2"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-3"
+    },
+    {
+      "id": "REQ-12",
+      "title": "Qualify 5 W coherent combining under specified thermal conditions",
+      "status": "UNVERIFIED",
+      "description": "No power or thermal qualification. Present resistor is intended for small-signal VNA tests only.",
+      "basis": "own",
+      "set": {
+        "complete": false,
+        "members": 0,
+        "passed": 0,
+        "failed": 0,
+        "error": 0,
+        "skipped": 0,
+        "missing": 0,
+        "not_run": 0,
+        "moved": 0,
+        "quarantined": 0
+      },
+      "members": [],
+      "demanded_level": "hil",
+      "provided_level": null,
+      "satisfies": [
+        "UN-1"
+      ],
+      "refines": [],
+      "implements": [],
+      "method": "TM-4"
+    }
+  ],
+  "mitigations": [],
+  "risks": [],
+  "test_methods": [
+    {
+      "id": "TM-1",
+      "title": "Exported-footprint native FDTD on three grids",
+      "status": "FAILED",
+      "description": "81 frequencies from 24 to 32 GHz; 50 ohm renormalization; inspect reports/validation.md for limitations.",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7"
+      ],
+      "level": "simulation",
+      "used_by": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7"
+      ]
+    },
+    {
+      "id": "TM-2",
+      "title": "KiCad native DRC and geometry inspection",
+      "status": "VERIFIED",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-8",
+        "REQ-9",
+        "REQ-10"
+      ],
+      "level": "inspection",
+      "used_by": [
+        "REQ-8",
+        "REQ-9",
+        "REQ-10"
+      ]
+    },
+    {
+      "id": "TM-3",
+      "title": "Calibrated three-port VNA measurement",
+      "status": "UNVERIFIED",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-11"
+      ],
+      "level": "hil",
+      "used_by": [
+        "REQ-11"
+      ]
+    },
+    {
+      "id": "TM-4",
+      "title": "Controlled-power thermal qualification",
+      "status": "UNVERIFIED",
+      "basis": "derived",
+      "derived_from": [
+        "REQ-12"
+      ],
+      "level": "hil",
+      "used_by": [
+        "REQ-12"
+      ]
+    }
+  ],
+  "modules": {},
+  "high_open_risks": [],
+  "pyramid_violations": [],
+  "unknown_evidence": {},
+  "gaps": [
+    {
+      "kind": "failed",
+      "entity": "REQ-1",
+      "message": "failing evidence: rf_validation::coarse_REQ-1, rf_validation::fine_REQ-1, rf_validation::finer_REQ-1",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "failed",
+      "entity": "REQ-3",
+      "message": "failing evidence: rf_validation::coarse_REQ-3, rf_validation::fine_REQ-3, rf_validation::finer_REQ-3",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "failed",
+      "entity": "REQ-6",
+      "message": "failing evidence: rf_validation::coarse_REQ-6, rf_validation::fine_REQ-6, rf_validation::finer_REQ-6",
+      "route": "autonomous",
+      "demanded_level": "simulation"
+    },
+    {
+      "kind": "unverified",
+      "entity": "REQ-11",
+      "message": "no test evidence",
+      "route": "human-gate",
+      "demanded_level": "hil"
+    },
+    {
+      "kind": "unverified",
+      "entity": "REQ-12",
+      "message": "no test evidence",
+      "route": "human-gate",
+      "demanded_level": "hil"
+    }
+  ]
+}

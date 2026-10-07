@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites>
+  <testsuite name="coarse">
+    <testcase name="coarse_REQ-1" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-1" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="minimum per-port return loss: [12.643721220497714, 14.610223022129599, 14.610223022130008]; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/return_loss_min_db_per_port">minimum per-port return loss: [12.643721220497714, 14.610223022129599, 14.610223022130008]; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/return_loss_min_db_per_port</failure>
+      <system-out>minimum per-port return loss: [12.643721220497714, 14.610223022129599, 14.610223022130008]; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/return_loss_min_db_per_port</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-2" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-2" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum isolation: 14.901326451847439; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/isolation_min_db</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-3" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-3" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum excess loss: 0.7957604625884325; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/excess_loss_max_db">maximum excess loss: 0.7957604625884325; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/excess_loss_max_db</failure>
+      <system-out>maximum excess loss: 0.7957604625884325; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/excess_loss_max_db</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-4" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-4" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum imbalance: 4.369837824924616e-13; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/amplitude_imbalance_max_db</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-5" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-5" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum phase imbalance: 6.29820043754821e-11; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/phase_imbalance_max_deg</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-6" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-6" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum coherent loss: 0.7691722179703759; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/coherent_combining_loss_max_db">maximum coherent loss: 0.7691722179703759; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/coherent_combining_loss_max_db</failure>
+      <system-out>maximum coherent loss: 0.7691722179703759; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/coherent_combining_loss_max_db</system-out>
+    </testcase>
+    <testcase name="coarse_REQ-7" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-7" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum eigenvalue of I-S†S: 0.06437094533611785; source=runs/jlc20mil/coarse-validated.s3p; sha256=f11c4239d8909421c101154086765d16ad95f2e6bd1d37ac2aa975fa72bde8dd; metrics=runs/jlc20mil/comparison.json#/grids/coarse/passivity_margin_min</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="fine">
+    <testcase name="fine_REQ-1" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-1" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="minimum per-port return loss: [11.929100539083946, 14.13139508009607, 14.13139508009522]; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/return_loss_min_db_per_port">minimum per-port return loss: [11.929100539083946, 14.13139508009607, 14.13139508009522]; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/return_loss_min_db_per_port</failure>
+      <system-out>minimum per-port return loss: [11.929100539083946, 14.13139508009607, 14.13139508009522]; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/return_loss_min_db_per_port</system-out>
+    </testcase>
+    <testcase name="fine_REQ-2" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-2" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum isolation: 14.88965882694317; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/isolation_min_db</system-out>
+    </testcase>
+    <testcase name="fine_REQ-3" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-3" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum excess loss: 0.845783048462776; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/excess_loss_max_db">maximum excess loss: 0.845783048462776; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/excess_loss_max_db</failure>
+      <system-out>maximum excess loss: 0.845783048462776; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/excess_loss_max_db</system-out>
+    </testcase>
+    <testcase name="fine_REQ-4" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-4" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum imbalance: 2.6352253712502716e-12; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/amplitude_imbalance_max_db</system-out>
+    </testcase>
+    <testcase name="fine_REQ-5" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-5" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum phase imbalance: 9.011566202427133e-11; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/phase_imbalance_max_deg</system-out>
+    </testcase>
+    <testcase name="fine_REQ-6" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-6" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum coherent loss: 0.8195787944013638; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/coherent_combining_loss_max_db">maximum coherent loss: 0.8195787944013638; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/coherent_combining_loss_max_db</failure>
+      <system-out>maximum coherent loss: 0.8195787944013638; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/coherent_combining_loss_max_db</system-out>
+    </testcase>
+    <testcase name="fine_REQ-7" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-7" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum eigenvalue of I-S†S: 0.06419989001551668; source=runs/jlc20mil/fine-validated.s3p; sha256=499c4270f55929fdd5a970f2c6fb168cb9a54e8287a437c29eef349f024c95cd; metrics=runs/jlc20mil/comparison.json#/grids/fine/passivity_margin_min</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="finer">
+    <testcase name="finer_REQ-1" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-1" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="minimum per-port return loss: [11.822555861296191, 14.020467339715182, 14.020467339710052]; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/return_loss_min_db_per_port">minimum per-port return loss: [11.822555861296191, 14.020467339715182, 14.020467339710052]; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/return_loss_min_db_per_port</failure>
+      <system-out>minimum per-port return loss: [11.822555861296191, 14.020467339715182, 14.020467339710052]; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/return_loss_min_db_per_port</system-out>
+    </testcase>
+    <testcase name="finer_REQ-2" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-2" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum isolation: 14.874722431035297; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/isolation_min_db</system-out>
+    </testcase>
+    <testcase name="finer_REQ-3" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-3" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum excess loss: 0.86237582756605; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/excess_loss_max_db">maximum excess loss: 0.86237582756605; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/excess_loss_max_db</failure>
+      <system-out>maximum excess loss: 0.86237582756605; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/excess_loss_max_db</system-out>
+    </testcase>
+    <testcase name="finer_REQ-4" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-4" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum imbalance: 7.248868172382572e-12; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/amplitude_imbalance_max_db</system-out>
+    </testcase>
+    <testcase name="finer_REQ-5" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-5" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>maximum phase imbalance: 2.542060705465799e-10; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/phase_imbalance_max_deg</system-out>
+    </testcase>
+    <testcase name="finer_REQ-6" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-6" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <failure message="maximum coherent loss: 0.838400833755864; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/coherent_combining_loss_max_db">maximum coherent loss: 0.838400833755864; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/coherent_combining_loss_max_db</failure>
+      <system-out>maximum coherent loss: 0.838400833755864; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/coherent_combining_loss_max_db</system-out>
+    </testcase>
+    <testcase name="finer_REQ-7" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-7" />
+        <property name="level" value="simulation" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>minimum eigenvalue of I-S†S: 0.06510062520897487; source=runs/jlc20mil/finer-validated.s3p; sha256=c39cd5836ad59bd78b036d1563f77ae30dc24d01476cac07fd4eebc8f1706f3f; metrics=runs/jlc20mil/comparison.json#/grids/finer/passivity_margin_min</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="board">
+    <testcase name="core_and_outline" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-8" />
+        <property name="level" value="inspection" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>output/test-board/rf-combiner-test.kicad_pcb; outline dimensions: output/test-board/geometry.json. Core .51 mm, nominal finished thickness .65 mm; stackup requires fab confirmation.</system-out>
+    </testcase>
+    <testcase name="launch_footprints" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-9" />
+        <property name="level" value="inspection" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>output/test-board/geometry.json; output/test-board/BOM.csv; source mechanical drawing reference/1092-03A-6.pdf. Inspection does not verify launch RF performance.</system-out>
+    </testcase>
+    <testcase name="native_drc" classname="rf_validation">
+      <properties>
+        <property name="requirement" value="REQ-10" />
+        <property name="level" value="inspection" />
+        <property name="artifact.footprint_sha256" value="9f3dbff71653ff760de6315ffaa4769045a99520996ae2c5f03df67b78919b3c" />
+      </properties>
+      <system-out>output/test-board/drc.json: violations=0, unconnected=0</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

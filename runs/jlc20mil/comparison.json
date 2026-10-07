@@ -1,0 +1,94 @@
+{
+  "schema": "rf-combiner-validation/1",
+  "band_ghz": [
+    24,
+    32
+  ],
+  "reference_ohms": 50,
+  "reference_planes": "three design-window boundaries",
+  "limits": {
+    "return_loss_min_db": 15,
+    "isolation_min_db": 14,
+    "excess_loss_max_db": 0.7,
+    "amplitude_imbalance_max_db": 0.5,
+    "phase_imbalance_max_deg": 5
+  },
+  "grids": {
+    "coarse": {
+      "pitch_mm": 0.15,
+      "substrate_cells": 4,
+      "return_loss_min_db_per_port": [
+        12.643721220497714,
+        14.610223022129599,
+        14.610223022130008
+      ],
+      "isolation_min_db": 14.901326451847439,
+      "excess_loss_max_db": 0.7957604625884325,
+      "coherent_combining_loss_max_db": 0.7691722179703759,
+      "amplitude_imbalance_max_db": 4.369837824924616e-13,
+      "phase_imbalance_max_deg": 6.29820043754821e-11,
+      "passivity_margin_min": 0.06437094533611785,
+      "reciprocity_error_max": 0.003741017691871021,
+      "wall_s": 36.559836368018296,
+      "steps": {
+        "1": 5223,
+        "2": 5419,
+        "3": 5419
+      },
+      "meets_datasheet_small_signal_limits": false
+    },
+    "fine": {
+      "pitch_mm": 0.075,
+      "substrate_cells": 6,
+      "return_loss_min_db_per_port": [
+        11.929100539083946,
+        14.13139508009607,
+        14.13139508009522
+      ],
+      "isolation_min_db": 14.88965882694317,
+      "excess_loss_max_db": 0.845783048462776,
+      "coherent_combining_loss_max_db": 0.8195787944013638,
+      "amplitude_imbalance_max_db": 2.6352253712502716e-12,
+      "phase_imbalance_max_deg": 9.011566202427133e-11,
+      "passivity_margin_min": 0.06419989001551668,
+      "reciprocity_error_max": 0.003844218612073385,
+      "wall_s": 163.37431653600652,
+      "steps": {
+        "1": 9544,
+        "2": 10660,
+        "3": 10660
+      },
+      "meets_datasheet_small_signal_limits": false
+    },
+    "finer": {
+      "pitch_mm": 0.049999999999999996,
+      "substrate_cells": 8,
+      "return_loss_min_db_per_port": [
+        11.822555861296191,
+        14.020467339715182,
+        14.020467339710052
+      ],
+      "isolation_min_db": 14.874722431035297,
+      "excess_loss_max_db": 0.86237582756605,
+      "coherent_combining_loss_max_db": 0.838400833755864,
+      "amplitude_imbalance_max_db": 7.248868172382572e-12,
+      "phase_imbalance_max_deg": 2.542060705465799e-10,
+      "passivity_margin_min": 0.06510062520897487,
+      "reciprocity_error_max": 0.003513440984537335,
+      "wall_s": 484.9989457880147,
+      "steps": {
+        "1": 14643,
+        "2": 15741,
+        "3": 15741
+      },
+      "meets_datasheet_small_signal_limits": false
+    }
+  },
+  "assumptions": [
+    "Ideal 100 ohm lumped resistor; no package parasitics",
+    "Zero-thickness smooth copper sheet; no soldermask or ENIG/roughness model",
+    "Infinite substrate and solid ground; launch connectors and fixture feeds excluded",
+    "Small-signal EM only; no 5 W combining power qualification"
+  ],
+  "passed": false
+}

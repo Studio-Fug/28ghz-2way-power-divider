@@ -1,0 +1,1 @@
+rules-requirements @ git+https://github.com/Studio-Fug/rules_requirements.git@aabecadd6e8710a11e99ccb366e63d858d92f6c6

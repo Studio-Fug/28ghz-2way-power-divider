@@ -1,0 +1,114 @@
+yapnr.rf native FDTD: /opt/venv/lib/python3.11/site-packages/yapnr/rf/libyapnr_fdtd.so (arm64 neon; gcc 13.3.0)
+calibrated a 6-cell feed in 5.5 s
+calibrated a 8-cell feed in 4.1 s
+feed width 8 cells (Z_c at f_c: {6: 62.49683827092026, 8: 52.88362647340532})
+FDTD backend: native float64, 2 thread(s) (libyapnr_fdtd.so, arm64 neon)
+it    0  β     8  t +17.9807  t_bin +18.4261  gray 0.230  Δx 0.200  93.0 s
+it    1  β     8  t +13.3299  gray 0.235  Δx 0.200  48.9 s
+it    2  β     8  t +8.0253  gray 0.166  Δx 0.200  30.8 s
+it    3  β     8  t +3.1835  gray 0.133  Δx 0.200  34.2 s
+it    4  β     8  t +2.3601  gray 0.122  Δx 0.200  30.4 s
+it    5  β     8  t +2.2255  t_bin +1.3486  gray 0.143  Δx 0.200  107.6 s
+it    6  β     8  t +1.9139  gray 0.122  Δx 0.200  37.2 s
+it    7  β     8  t +1.5288  gray 0.139  Δx 0.200  21.1 s
+it    8  β     8  t +1.0802  gray 0.120  Δx 0.200  28.8 s
+it    9  β     8  t +1.0331  gray 0.181  Δx 0.200  38.4 s
+it   10  β     8  t +1.2800  t_bin +1.3500  gray 0.138  Δx 0.200  83.2 s
+it   11  β     8  t +1.0211  gray 0.198  Δx 0.200  29.1 s
+it   12  β     8  t +0.8612  gray 0.154  Δx 0.200  33.1 s
+it   13  β     8  t +0.8964  gray 0.192  Δx 0.200  42.4 s
+it   14  β     8  t +0.8080  gray 0.190  Δx 0.200  22.8 s
+it   15  β     8  t +0.7805  t_bin +0.7840  gray 0.188  Δx 0.200  66.3 s
+it   16  β     8  t +0.6611  gray 0.200  Δx 0.200  24.6 s
+it   17  β     8  t +0.5704  gray 0.210  Δx 0.200  33.3 s
+it   18  β     8  t +0.6162  gray 0.214  Δx 0.200  25.9 s
+it   19  β     8  t +0.4911  gray 0.209  Δx 0.200  42.2 s
+it   20  β     8  t +0.4862  t_bin +0.5963  gray 0.207  Δx 0.200  97.1 s
+it   21  β     8  t +0.4228  gray 0.220  Δx 0.200  33.7 s
+it   22  β     8  t +0.4050  gray 0.205  Δx 0.200  39.0 s
+it   23  β     8  t +0.3749  gray 0.213  Δx 0.200  25.9 s
+it   24  β     8  t +0.3519  gray 0.214  Δx 0.189  33.1 s
+it   25  β     8  t +0.3463  t_bin +0.5134  gray 0.215  Δx 0.197  68.7 s
+it   26  β     8  t +0.3381  gray 0.219  Δx 0.186  29.1 s
+it   27  β     8  t +0.3365  gray 0.216  Δx 0.141  20.6 s
+it   28  β     8  t +0.3371  gray 0.221  Δx 0.192  29.9 s
+it   29  β     8  t +0.3309  gray 0.223  Δx 0.200  22.6 s
+it   30  β     8  t +0.3312  t_bin +0.5140  gray 0.221  Δx 0.168  74.9 s
+it   31  β     8  t +0.3258  gray 0.223  Δx 0.152  22.4 s
+it   32  β     8  t +0.3223  gray 0.228  Δx 0.199  20.1 s
+it   33  β     8  t +0.3185  gray 0.229  Δx 0.120  37.1 s
+it   34  β     8  t +0.3139  gray 0.235  Δx 0.200  18.3 s
+it   35  β    16  t +0.6848  t_bin +0.5140  gray 0.099  Δx 0.025  304.9 s
+it   36  β    16  t +0.5213  gray 0.107  Δx 0.037  81.9 s
+it   37  β    16  t +0.5515  gray 0.128  Δx 0.037  68.4 s
+it   38  β    16  t +0.5081  gray 0.126  Δx 0.056  60.1 s
+it   39  β    16  t +0.4233  gray 0.111  Δx 0.011  168.5 s
+it   40  β    16  t +0.3681  t_bin +0.8735  gray 0.118  Δx 0.016  106.5 s
+it   41  β    16  t +0.3943  gray 0.113  Δx 0.016  59.9 s
+it   42  β    16  t +0.3454  gray 0.117  Δx 0.012  82.3 s
+it   43  β    16  t +0.3564  gray 0.121  Δx 0.012  60.7 s
+it   44  β    16  t +0.3264  gray 0.121  Δx 0.009  86.7 s
+it   45  β    16  t +0.3561  t_bin +0.8889  gray 0.125  Δx 0.009  93.1 s
+it   46  β    16  t +0.3578  gray 0.128  Δx 0.009  57.0 s
+it   47  β    16  t +0.3577  gray 0.128  Δx 0.007  98.4 s
+it   48  β    16  t +0.3349  gray 0.129  Δx 0.010  63.3 s
+it   49  β    16  t +0.3349  gray 0.132  Δx 0.010  71.1 s
+it   50  β    32  t +0.4536  t_bin +0.8885  gray 0.063  Δx 0.012  234.9 s
+it   51  β    32  t +0.3839  gray 0.069  Δx 0.019  75.1 s
+it   52  β    32  t +0.3699  gray 0.078  Δx 0.014  107.7 s
+it   53  β    32  t +0.3649  gray 0.076  Δx 0.021  75.7 s
+it   54  β    32  t +0.3409  gray 0.072  Δx 0.008  147.7 s
+it   55  β    32  t +0.3129  t_bin +0.8960  gray 0.070  Δx 0.006  147.8 s
+it   56  β    32  t +0.3093  gray 0.070  Δx 0.004  111.6 s
+it   57  β    32  t +0.3103  gray 0.069  Δx 0.004  89.7 s
+it   58  β    32  t +0.2965  gray 0.067  Δx 0.007  74.9 s
+it   59  β    32  t +0.3096  gray 0.067  Δx 0.007  82.9 s
+it   60  β    32  t +0.3208  t_bin +0.8966  gray 0.072  Δx 0.007  125.0 s
+it   61  β    32  t +0.3014  gray 0.069  Δx 0.005  116.9 s
+it   62  β    32  t +0.2964  gray 0.071  Δx 0.008  94.3 s
+it   63  β    32  t +0.3108  gray 0.070  Δx 0.008  82.7 s
+it   64  β    32  t +0.3042  gray 0.071  Δx 0.006  153.8 s
+it   65  β    64  t +0.4025  t_bin +1.1648  rejected  gray 0.032  Δx 0.000  348.5 s
+it   66  β    64  t +0.4025  gray 0.032  Δx 0.001  40.7 s
+it   67  β    64  t +0.4060  gray 0.032  Δx 0.001  93.6 s
+it   68  β    64  t +0.4063  gray 0.031  Δx 0.001  85.7 s
+it   69  β    64  t +0.4070  gray 0.031  Δx 0.001  78.7 s
+it   70  β    64  t +0.4073  t_bin +0.8966  rejected  gray 0.030  Δx 0.000  117.1 s
+it   71  β    64  t +0.4073  rejected  gray 0.030  Δx 0.000  0.1 s
+it   72  β    64  t +0.4073  rejected  gray 0.030  Δx 0.000  0.1 s
+exporting the binarized design of iteration 25 (t +0.5134); the last design's is +0.8966
+width/space repair changed 8 pixels
+coarse sweep: passivity margin 6.18e-02
+{
+  "schedule": {
+    "betas": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "iterations": [
+      35,
+      15,
+      15,
+      10
+    ],
+    "min_iterations": 8,
+    "lookback": 5,
+    "t_tol": 0.001,
+    "drho_tol": 0.01,
+    "move": 0.2,
+    "move_late": 0.05,
+    "late_beta": 32.0
+  },
+  "iterations": 73,
+  "stop_reason": "schedule",
+  "final_beta": 64.0,
+  "gray": 0.01056145235150902,
+  "gray_ok": false,
+  "t_last": 0.40734190077199384,
+  "export_iteration": 25,
+  "t_binary_exported": 0.5134498417994056,
+  "t_binary_last": 0.8965655246536495,
+  "best_iteration_tracked": 25
+}

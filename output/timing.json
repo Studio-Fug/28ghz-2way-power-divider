@@ -1,0 +1,17 @@
+{
+  "recorded_first_prompt_utc": "2026-10-07T21:05:15.518Z",
+  "recorded_first_prompt_local": "2026-10-07 14:05:15.518 America/Los_Angeles",
+  "source": "local session user-message timestamp",
+  "caveat": "May exclude earlier time if the original prompt was replayed after restart",
+  "validation_started_utc": "2026-10-07T22:57:11.197651142Z",
+  "optimization_wall_seconds": {
+    "optimization": 5394.165323143068,
+    "export": 33.38205110200215,
+    "total": 5481.598586003005
+  },
+  "validation_disposition": "FAIL: return loss, excess insertion loss and coherent combining loss; procedure completed, design not validated as a comparable replacement",
+  "validation_completed_utc": "2026-10-07T23:08:36.586193+00:00",
+  "elapsed_first_prompt_to_validation_seconds": 7401.068193,
+  "repository_package_completed_utc": "2026-10-07T23:09:39.562726+00:00",
+  "elapsed_first_prompt_to_package_seconds": 7464.044726
+}
