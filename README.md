@@ -21,7 +21,7 @@ The workflow follows [YAPNR RF inverse design](https://studio-fug.github.io/yapn
 
 ## Reproduction
 
-Docker is required for RF simulation. The pinned ARM64 image includes Torch 2.3.1 and the native FDTD backend. Its export package is incomplete, so `PYTHONPATH` uses the [vendored YAPNR snapshot](vendor/PROVENANCE.json); the native solver source hash was checked against that snapshot. The container is bounded to two CPU cores and 6 GB RAM.
+Docker is required for RF simulation. YAPNR is an external dependency, pinned by [upstream image digest, Git revision and archive checksum](dependencies/yapnr.json). The run scripts build a cached runtime image from [Dockerfile](Dockerfile), fetching upstream source during the build; no YAPNR source is vendored in this repository. The upstream image includes Torch 2.3.1 and the native FDTD backend, but its wheel omits `yapnr.rf.export` ([upstream issue #96](https://github.com/Studio-Fug/yapnr/issues/96)). Until that packaging defect is fixed, the derived image loads the complete pinned upstream Python package from `/opt/yapnr-dependency`, retaining the base image's matching native solver. This is a temporary source-dependency workaround, not a `pip install git+...` installation. Build-time imports and native-source checks fail if the dependency is incomplete or mismatched. Containers are bounded to two CPU cores and 6 GB RAM. The first build needs network access; later builds reuse Docker layers.
 
 ```sh
 ./run-container.sh > optimization.log 2>&1
@@ -57,6 +57,18 @@ The build converts the continuous multi-terminal footprint graphic to a custom-p
 
 ## Third-party material
 
-The vendored YAPNR source is AGPL-3.0; its license is retained in [vendor/yapnr/LICENSE](vendor/yapnr/LICENSE). Manufacturer documents retain their respective copyrights. Tool revisions and image digest are recorded in [vendor/PROVENANCE.json](vendor/PROVENANCE.json) and [result.json](runs/jlc20mil/result.json).
+YAPNR is an external AGPL-3.0 dependency; its source and license are available in the [upstream repository](https://github.com/Studio-Fug/yapnr). Manufacturer documents retain their respective copyrights. Tool revisions and image digest are recorded in [dependencies/yapnr.json](dependencies/yapnr.json) and [result.json](runs/jlc20mil/result.json). The initial simulations used a local snapshot of the same revision. Every Python module was byte-compared with the fetched upstream source and matched, and the native source hash also matches; historical simulation artifacts are unchanged.
 
 A plot of the recorded validation sweeps is in [simulation-comparison.png](reports/simulation-comparison.png); regenerate it with `python3 scripts/plot_results.py` after installing NumPy and Matplotlib.
+
+To verify that the external dependency reproduces the original simulation, run:
+
+```sh
+./scripts/build-runtime.sh
+docker run --rm --cpus 2 --memory 6g -v "$PWD:/project" -w /tmp \
+  -e OPENBLAS_NUM_THREADS=1 -e OMP_NUM_THREADS=2 -e YAPNR_RF_THREADS=2 \
+  -e YAPNR_RF_REQUIRE_NATIVE=1 --entrypoint python3 \
+  28ghz-divider-rf:57df5897-1 -u /project/scripts/check_dependency.py
+```
+
+[Recorded dependency check](reports/dependency-smoke.json) compares the full complex coarse-grid S matrix, with exact equality required.

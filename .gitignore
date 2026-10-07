@@ -18,3 +18,5 @@ preview-export.log
 .matplotlib/
 
 reference/rf-inverse-design.html
+
+runs/scaled-seed/

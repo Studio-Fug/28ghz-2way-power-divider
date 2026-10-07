@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/Studio-Fug/yapnr",
+  "commit": "57df589747565bb85cde37a861c5939f844b1a13",
+  "license": "AGPL-3.0",
+  "container_image": "ghcr.io/studio-fug/yapnr@sha256:7434f6a7390db07e2bd43bd8f48df8d3536edd0ba5cff5ce9fc73e872bc32c58",
+  "native_source_sha256": "9f149dc44267e05574813e7482ec39fb5030d5cf3b7f5d7c362dbb40a70d4a33",
+  "rules_requirements_commit": "aabecadd6e8710a11e99ccb366e63d858d92f6c6",
+  "dependency_archive_url": "https://codeload.github.com/Studio-Fug/yapnr/tar.gz/57df589747565bb85cde37a861c5939f844b1a13",
+  "dependency_archive_sha256": "0808d292867599ca04636c38a101c8a66d7222bb4e65483b8ba4a28ecbbc831a",
+  "dependency_mode": "Pinned upstream source fetched at Docker build time; native solver and runtime dependencies supplied by pinned upstream image",
+  "packaging_workaround": "Pinned wheel omits yapnr.rf.export; upstream Python package is fetched into /opt/yapnr-dependency inside the derived image",
+  "original_simulation_provenance": "The original run used a local snapshot of the same revision. Every Python module was byte-compared with the fetched upstream archive and matched; native source hash also matches. Published simulation results are unchanged.",
+  "local_runtime_image": "28ghz-divider-rf:57df5897-1",
+  "upstream_packaging_issue": "https://github.com/Studio-Fug/yapnr/issues/96"
+}

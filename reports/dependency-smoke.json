@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "procedure": "Re-simulate exported footprint at refine=1, n_sub=4, 81 points with fetched external dependency, outside source checkout",
+  "reference": "runs/jlc20mil/coarse-validated.npz",
+  "max_absolute_s_difference": 0.0,
+  "bit_identical": true,
+  "native": {
+    "loaded": true,
+    "library": "libyapnr_fdtd.so",
+    "sha256": "5c18cd983e40cde3935b0ccf3b4c1745b21e6bd85783c3d87bc6be2de7a998b3",
+    "source_sha256": "9f149dc44267e05574813e7482ec39fb5030d5cf3b7f5d7c362dbb40a70d4a33",
+    "compiler": "gcc 13.3.0",
+    "isa": "arm64 neon",
+    "arithmetic": "no contraction, no reassociation (checked at load)"
+  },
+  "dependency": "dependencies/yapnr.json"
+}
