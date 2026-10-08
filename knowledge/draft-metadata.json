@@ -1,0 +1,44 @@
+{
+  "schema": "knowledge-draft-metadata/1",
+  "subject_hash": "17c7899537adb3e669f6a502e5c591e4fbd789ab6886cb34bdcc026a1f7f00b6",
+  "payload_bytes": 299524,
+  "design_files": 29,
+  "record_files": 19,
+  "requirements": 15,
+  "reported_pass_requirements": [
+    "REQ-2",
+    "REQ-4",
+    "REQ-5",
+    "REQ-7",
+    "REQ-8",
+    "REQ-9",
+    "REQ-10"
+  ],
+  "reported_failed_requirements": [
+    "REQ-1",
+    "REQ-3",
+    "REQ-6"
+  ],
+  "missing_requirements": [
+    "REQ-11",
+    "REQ-12",
+    "REQ-13",
+    "REQ-14",
+    "REQ-15"
+  ],
+  "publisher_key_is_placeholder": false,
+  "publication": "Public PoC draft; unsigned until explicitly sealed",
+  "origin": {
+    "repository": "https://github.com/Studio-Fug/28ghz-2way-power-divider",
+    "source_revision": "66c6e169a4a4493971753f8e23b1d327d4e11174",
+    "source_visibility": "public",
+    "knowledge_repository": "https://github.com/Studio-Fug/knowledge",
+    "knowledge_revision": "25c50c9ac16f3195af54266eb8aae51b56b166e3",
+    "publication": "Public PoC candidate; prototype publisher identity, not independent verification",
+    "translation": "Publisher-reported mapping of existing simulation/inspection records, not independently authenticated testing",
+    "open_tool_gaps": [
+      "https://github.com/Studio-Fug/yapnr/issues/96",
+      "https://github.com/Studio-Fug/yapnr/issues/97"
+    ]
+  }
+}

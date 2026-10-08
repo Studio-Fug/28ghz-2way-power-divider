@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "path": "output/test-board",
+      "role": "design",
+      "repository": "https://github.com/Studio-Fug/28ghz-2way-power-divider",
+      "revision": "66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "archive": "https://codeload.github.com/Studio-Fug/28ghz-2way-power-divider/tar.gz/66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "subdirectory": "output/test-board",
+      "format": "git_tar_gzip_v1",
+      "sha256": "2ab55d10645e2668abd84120c2e16af4d70710eedddae1c30fce2a0e280375ad"
+    },
+    {
+      "path": "reports",
+      "role": "record",
+      "repository": "https://github.com/Studio-Fug/28ghz-2way-power-divider",
+      "revision": "66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "archive": "https://codeload.github.com/Studio-Fug/28ghz-2way-power-divider/tar.gz/66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "subdirectory": "reports",
+      "format": "git_tar_gzip_v1",
+      "sha256": "aef9814c9c4c96677473e30d3606cd314ab05ad09947a023c6fad5eaa0483e03"
+    },
+    {
+      "path": "runs/jlc20mil",
+      "role": "record",
+      "repository": "https://github.com/Studio-Fug/28ghz-2way-power-divider",
+      "revision": "66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "archive": "https://codeload.github.com/Studio-Fug/28ghz-2way-power-divider/tar.gz/66c6e169a4a4493971753f8e23b1d327d4e11174",
+      "subdirectory": "runs/jlc20mil",
+      "format": "git_tar_gzip_v1",
+      "sha256": "ba87bc8d8aa2f3be855a3c4a218d5ed7189ed5c9a2f07d6d8c0f363aad557758"
+    }
+  ]
+}

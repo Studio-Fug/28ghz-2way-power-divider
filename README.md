@@ -80,3 +80,5 @@ docker run --rm --cpus 2 --memory 6g -v "$PWD:/project" -w /tmp \
 ```
 
 [Recorded dependency check](reports/dependency-smoke.json) compares the full complex coarse-grid S matrix, with exact equality required.
+
+The [public Knowledge PoC](knowledge/README.md) packages requirements, simulation evidence and commit-pinned board artifacts into a signed object, preserving failed and missing validation.
