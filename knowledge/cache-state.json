@@ -1,0 +1,20 @@
+{
+  "schema": "knowledge-core-state/1",
+  "imports": [
+    {
+      "schema": "knowledge-core-entry/1",
+      "github": "Studio-Fug/28ghz-2way-power-divider",
+      "revision": "7688adb7f19feb475dbbd40aa60f916cde5e4a09",
+      "descriptor": "knowledge.json"
+    }
+  ],
+  "objects": [
+    {
+      "address": "9cdb703565b6e97f87064670c3646c4d566506af4e155964fe5069bd6695b88e",
+      "completeness": "failed",
+      "reusable": false
+    }
+  ],
+  "mode": "additive",
+  "checking": "signatures_and_artifact_content_checked; external_sources_not_realized; tests_not_rerun"
+}

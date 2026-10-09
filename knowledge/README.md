@@ -18,3 +18,5 @@ The divider repository provides `scripts/export_knowledge_object.py` and `knowle
 Local CLI receipts are retained in `inspect.json`, `search-default.json`, `search-incomplete.json` and `realization.json`. Materialized bundles are generated and excluded from Git.
 
 The root `knowledge.json` is the import contract for knowledge-core. It identifies the signed artifact and its byte hash/address; requirements, specification, validation and source commitments remain owned by this project. Catalog entries pin a GitHub revision and import this descriptor. The part is cached, not contributed to the Knowledge implementation repository.
+
+[knowledge-core](https://github.com/Studio-Fug/knowledge-core) now owns the pinned catalog entry and cache reconciliation tool. The original implementation-repo draft PR was closed. `cache-state.json` records the successful catalog import into the local `.knowledge` cache; a repeat import was also verified.
