@@ -16,3 +16,5 @@ Use `knowledge inspect --help`, `knowledge put --help`, and `knowledge realize -
 The divider repository provides `scripts/export_knowledge_object.py` and `knowledge/source-commitments.json` to reproduce the payload. Generate a private prototype key locally and seal the payload with Knowledge; a new key changes the artifact address. Do not commit private keys. Regeneration should use the pinned design revision and its matching source commitments.
 
 Local CLI receipts are retained in `inspect.json`, `search-default.json`, `search-incomplete.json` and `realization.json`. Materialized bundles are generated and excluded from Git.
+
+The root `knowledge.json` is the import contract for knowledge-core. It identifies the signed artifact and its byte hash/address; requirements, specification, validation and source commitments remain owned by this project. Catalog entries pin a GitHub revision and import this descriptor. The part is cached, not contributed to the Knowledge implementation repository.

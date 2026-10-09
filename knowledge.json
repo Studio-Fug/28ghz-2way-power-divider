@@ -1,0 +1,12 @@
+{
+  "schema": "knowledge-project/1",
+  "artifact": {
+    "path": "knowledge/artifact.json",
+    "sha256": "a462549b5c495b935125a5a705e2d238e7d6f9a29d95990c9e599a47ad0d9824",
+    "address": "9cdb703565b6e97f87064670c3646c4d566506af4e155964fe5069bd6695b88e"
+  },
+  "requirements": "requirements/model.yaml",
+  "specification": "spec.json",
+  "validation": "reports/traceability.json",
+  "source_commitments": "knowledge/source-commitments.json"
+}
